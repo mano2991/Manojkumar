@@ -1482,6 +1482,137 @@ details p {
     border-radius: 5px;
 }
 
+.data-link {
+    margin-top: 10px;
+}
+
+.data-link-btn {
+    display: inline-block;
+    background: transparent;
+    color: #00b894;
+    border: 1px solid #00b894;
+    padding: 5px 12px;
+    font-size: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.data-link-btn:hover {
+    background: #00b894;
+    color: #fff;
+}
+
+.data-link-btn.secondary {
+    color: #ff6600;
+    border-color: #ff6600;
+    margin-left: 8px;
+}
+
+.data-link-btn.secondary:hover {
+    background: #ff6600;
+    color: #fff;
+}
+
+/* Tools Section */
+.tools .container {
+    padding-bottom: 40px;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.tool-card {
+    background: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    border-top: 4px solid var(--primary-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-card h4 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.tool-card .tool-tagline {
+    color: var(--hover-color);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tool-links {
+    margin-top: 15px;
+}
+
+.tools-subtitle {
+    margin-top: 20px;
+}
+
+.tools-subtitle h3 {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tools-subtitle p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.portal-card {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    border-left: 4px solid var(--hover-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portal-card:hover {
+    transform: translateY(-4px);
+}
+
+.portal-card h4 {
+    color: var(--primary-color);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.portal-card p {
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 /* Testimonial Section */
 .testimonial .container {
     padding-bottom: 40px;

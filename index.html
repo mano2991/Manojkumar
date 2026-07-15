@@ -45,8 +45,8 @@
           <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
           <li><a href="#publications"><i class="fa fa-list"></i> Publications</a></li>
+          <li><a href="#tools"><i class="fa fa-flask"></i> Tools</a></li>
           <li><a href="#service"><i class="fa fa-briefcase"></i> Services</a></li>
-          <li><a href="#blog"><i class="fa fa-envelope"></i> Blog</a></li>
           <li><a href="#testimonial"><i class="fa fa-quote-left"></i> Testimonials</a></li>
           <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
         </ul>
@@ -366,6 +366,7 @@
               <summary>Show Abstract</summary>
               <p>The failure of adult central nervous system neurons to regenerate after injury has been attributed to transcriptional and epigenetic barriers, but whether three-dimensional genome organization constitutes an independent regulatory layer encoding regenerative potential remains unknown. Here we present the first genome-wide map of chromatin compartments, topologically associating domains, and loops across postnatal development, adult homeostasis, and spinal cord injury in the mouse motor cortex. Postnatal maturation progressively consolidates a growth-restrictive three-dimensional architecture, and spinal cord injury alone partially reverses this consolidation, re-engaging neonatal gene programs through reorganized but functionally recapitulative architecture despite minimal transcriptional activation. This reversion is directed rather than stochastic, preferentially targeting pro-growth gene networks, and reveals a latent three-dimensional memory of developmental growth states in the adult cortical genome. Strikingly, NR2F6, a transcription factor that promotes corticospinal axon regeneration, extends this reversion beyond the neonatal state toward an earlier embryonic chromatin configuration, a depth of developmental plasticity that injury alone cannot reach. These findings establish three-dimensional genome topology as a regulatory layer encoding regenerative potential in adult cortical neurons, demonstrating that successful CNS regeneration requires accessing embryonic rather than merely neonatal chromatin states, and reframing regenerative failure as a topological problem with new therapeutic targets.</p>
           </details>
+          <p class="data-link"><a href="https://hicviz.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the Hi-C Data (hicviz)</a></p>
         </div>
 
         <div class="publication-card">
@@ -377,6 +378,7 @@
               <summary>Show Abstract</summary>
               <p>Adult central nervous system neurons fail to regenerate after injury, in part due to epigenetic constraints that maintain a growth-restrictive chromatin state. We previously showed that the transcription factor PATZ1 reprograms chromatin accessibility in injured corticospinal neurons to promote axon regeneration, but the underlying mechanism remained unclear. Here we use nucleosome-resolution profiling to reveal that PATZ1 induces widespread nucleosome eviction at regeneration-associated gene loci. PATZ1 treatment dramatically reduces both nucleosome occupancy and fuzziness, indicating active chromatin remodeling rather than passive destabilization. This remodeling occurs preferentially at distal regulatory elements, where PATZ1 drives a greater than 3-fold expansion of H3K27ac-marked active enhancers. Nucleosome eviction at these sites precedes enhancer activation, establishing a mechanistic link between chromatin remodeling and transcriptional reprogramming. Our findings demonstrate that targeted nucleosome eviction at enhancers underlies PATZ1-mediated chromatin reorganization, providing mechanistic insight into how epigenetic barriers to CNS regeneration can be overcome.</p>
           </details>
+          <p class="data-link"><a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snATAC/snRNA Data (patz1)</a></p>
         </div>
          
         <div class="publication-card">
@@ -388,6 +390,7 @@
               <summary>Show Abstract</summary>
               <p>Transcription factors are potent levers for neural repair, but systematic pipelines to uncover factors that unlock adult corticospinal regeneration are lacking. By intersecting developmental RNA-seq with ATAC-seq footprints, we pinpointed two nuclear-receptor transcription factors—NR2F1 and NR2F6, neither previously linked to CNS axon growth—as top candidates. Forced expression of either factor doubled neurite length in culture, and each proved highly effective in vivo: after unilateral pyramidotomy they drove robust midline sprouting, while after complete thoracic crush they supported long-tract CST regeneration that restored hip lift, partial swing trajectories and grip strength. Multi-omics dissection revealed complementary mechanisms: NR2F1 re-engaged chromatin-remodelling and cytoskeletal networks, whereas NR2F6, via a conserved corepressor domain, imposed a broad translational down-shift, bound predominantly to distal enhancers and re-packaged chromatin into new topologically associating domains that cluster growth genes with freshly activated regulatory hubs. These discoveries establish NR2F1 and NR2F6 as novel pro-regenerative TFs, demonstrate their potency across lesion types, and expose repression-driven translational control and enhancer–TAD reconfiguration as previously unrecognised axes of CNS repair.</p>
           </details>
+          <p class="data-link"><a href="https://nrtf.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snRNA Data (nrtf)</a></p>
         </div>
 
          <div class="publication-card">
@@ -410,6 +413,7 @@
               <summary>Show Abstract</summary>
               <p>Accurate quantification of neurite sprouting after injury is a critical step in axon regeneration research. Yet it remains a major bottleneck, as the current gold standard relies on manual counting by multiple blinded observers. This process is slow, labor-intensive, and prone to variability. While some software can measure total neurite length, they aren’t made to specifically measure new growth in complicated images from real-life injury models, like the thoracic crush and pyramidotomy model. Existing software can measure total neurite length in culture, but it is not designed to capture new growth in complex images from injury models, such as thoracic crush or pyramidotomy. Crucially, these tools lack the ability to selectively analyze growth within user-defined regions, a key requirement for injury paradigms. To address this need, we developed the Deep Neurite Analysis Tool (DeNAT), an accessible deep-learning–based platform that automatically measures neurite outgrowth after injury. DeNAT allows users to define regions of interest to specifically quantify sprouting in images from common spinal cord injury paradigms. We benchmarked its performance against manual scoring and conventional automated approaches. DeNAT achieved 87 percent accuracy in detecting neurite sprouts relative to manual counts, while reducing variability and labor. By combining user-guided region selection with automated deep learning analysis, DeNAT offers an accurate, reproducible, and efficient solution for measuring neurite outgrowth in injury models.</p>
           </details>
+          <p class="data-link"><a href="https://neuriteanalysis.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-rocket"></i> Try the DeNAT Tool</a></p>
         </div>
       
       <div class="publication-card">
@@ -421,6 +425,7 @@
               <summary>Show Abstract</summary>
               <p>Our research reveals how nerve cell growth genes become restricted during development through two distinct waves of chromatin closure. We found that injuries closer to the brain trigger broader chromatin hanges than distant injuries. Importantly, introducing the PATZ1 transcription factor after injury successfully reopened chromatin and reactivated developmental growth pathways. This work defines the timing of  hromatin restriction in CNS neurons and demonstrates it can be reversed to potentially support regeneration.</p>
           </details>
+          <p class="data-link"><a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snATAC/snRNA Data (patz1)</a></p>
         </div>
         <!-- Paper 1 - 2025 -->
         <div class="publication-card">
@@ -556,6 +561,75 @@
       </section>
       <!-- publication Section End -->
 
+      <!-- Tools Section -->
+      <section class="tools section" id="tools">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Tools &amp; Software</h2>
+              <br>
+              <p style="color: var(--text-color)">Free, browser-based tools I've built for the axon regeneration and neuroscience research community — no installation required.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="tool-grid">
+              <div class="tool-card">
+                <h4>Kima Suite</h4>
+                <p class="tool-tagline">Gait analysis for spinal cord injury research</p>
+                <p>A free, browser-based gait analysis suite built for researchers studying locomotor recovery after spinal cord injury. Kima takes pose-estimation data from DeepLabCut and turns it into publication-ready kinematic plots, gait parameters, and statistical summaries — all without installing any software.</p>
+                <div class="tool-links">
+                  <a href="https://kimasuite.in/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Launch Kima Suite</a>
+                </div>
+              </div>
+              <div class="tool-card">
+                <h4>DeNAT — Deep Neurite Analysis Tool</h4>
+                <p class="tool-tagline">Automated neurite outgrowth quantification</p>
+                <p>A machine-learning framework that automatically measures neurite outgrowth after CNS injury, letting users define regions of interest for injury paradigms like thoracic crush and pyramidotomy. DeNAT reaches 87% accuracy against manual scoring while cutting out observer variability and labor.</p>
+                <div class="tool-links">
+                  <a href="https://neuriteanalysis.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Launch DeNAT</a>
+                  <a href="https://www.biorxiv.org/content/10.1101/2025.09.18.676567v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Read the Preprint</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="section-title padd-15 tools-subtitle">
+              <h3>Interactive Data Portals</h3>
+              <p style="color: var(--text-color)">Companion webpages where you can explore the results behind specific papers directly — built alongside the analysis, not general-purpose software.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portal-grid">
+              <div class="portal-card">
+                <h4>HiCViz</h4>
+                <p>Explore the chromatin compartments, TADs, and loop maps behind our study of 3D genome rewiring and regenerative potential in the adult CNS.</p>
+                <div class="tool-links">
+                  <a href="https://hicviz.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
+                  <a href="https://www.biorxiv.org/content/10.64898/2026.03.12.711224v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
+                </div>
+              </div>
+              <div class="portal-card">
+                <h4>PATZ1 Explorer</h4>
+                <p>Browse the snATAC-seq and snRNA-seq data comparing PATZ1-treated versus injured corticospinal neurons.</p>
+                <div class="tool-links">
+                  <a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
+                  <a href="https://www.biorxiv.org/content/10.1101/2025.05.14.654166v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
+                </div>
+              </div>
+              <div class="portal-card">
+                <h4>NRTF Explorer</h4>
+                <p>Browse the snRNA-seq data behind the NR2F1/NR2F6 nuclear receptor transcription factor study in axon regeneration.</p>
+                <div class="tool-links">
+                  <a href="https://nrtf.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
+                  <a href="https://www.biorxiv.org/content/10.1101/2025.06.19.660319v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tools Section End -->
+
       <!-- Portfolio Section -->
 <section class="portfolio section" id="service">
   <div class="container">
@@ -611,71 +685,6 @@
   </div>
 </section>
 <!-- Portfolio Section End -->
-
-      <!-- Blog Section -->
-      <section class="blog section" id="blog">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Latest Blog</h2>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Blog Item -->
-            <div class="blog-item padd-15">
-              <div class="blog-item-inner shadow-dark">
-                <div class="blog-img">
-                  <img src="images/blog/1.jpg" alt="">
-                  <div class="blog-date">
-                    3 jan 2025
-                  </div>
-                </div>
-                <div class="blog-info">
-                  <h4 class="blog-title">Bee Eater</h4>
-                  <p class="blog-description">The quiet beauty of nature lies in its simplicity, where every flutter of a wing and every whisper of a breeze tells a story of life unfolding..</p>
-                  <p class="blog-tags">Tags : <a href="#">Wildlife</a> , <a href="#">Photography</a></p>
-                </div>
-              </div>
-            </div>
-            <!-- Blog Item End -->
-            <!-- Blog Item -->
-            <div class="blog-item padd-15">
-              <div class="blog-item-inner shadow-dark">
-                <div class="blog-img">
-                  <img src="images/blog/2.jpg" alt="">
-                  <div class="blog-date">
-                    25 Dec 2024
-                  </div>
-                </div>
-                <div class="blog-info">
-                  <h4 class="blog-title">Drops of Serenity</h4>
-                  <p class="blog-description">A single drop holds the universe, reflecting the beauty of nature in its purest form. Just like life, every moment is fleeting yet infinitely profound</p>
-                  <p class="blog-tags">Tags : <a href="#">Photography</a></p>
-                </div>
-              </div>
-            </div>
-            <!-- Blog Item End -->
-            <!-- Blog Item -->
-            <div class="blog-item padd-15">
-              <div class="blog-item-inner shadow-dark">
-                <div class="blog-img">
-                  <img src="images/blog/3.jpeg" alt="">
-                  <div class="blog-date">
-                    14 Dec 2024
-                  </div>
-                </div>
-                <div class="blog-info">
-                  <h4 class="blog-title">Unraveling Neural Pathways</h4>
-                  <p class="blog-description">The brain's complexity is reflected in its genomic blueprint—each gene, a note; each pathway, a melody shaping the orchestra of neural development.</p>
-                  <p class="blog-tags">Tags : <a href="#">Neuroscience</a>,<a href="#">Bioinformatics </a> </p>
-                </div>
-              </div>
-            </div>
-            <!-- Blog Item End -->
-          </div>
-        </div>
-      </section>
-      <!-- Blog Section End -->
 
       <!-- Testimonial Section -->
 <section class="testimonial section" id="testimonial">
