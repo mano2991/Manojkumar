@@ -1247,6 +1247,19 @@ select {
     padding: 0 50px;
 }
 
+#form-status {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+#form-status.success {
+    color: #00b894;
+}
+
+#form-status.error {
+    color: #ff4757;
+}
+
 /* Responsive */
 
 @media(max-width: 1199px) {

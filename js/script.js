@@ -180,11 +180,51 @@ const navTogglerBtn = document.querySelector('.nav-toggler'),
 
 navTogglerBtn.addEventListener('click', asideSectionTogglerBtn);
 
-function asideSectionTogglerBtn() 
+function asideSectionTogglerBtn()
 {
     aside.classList.toggle('open');
     navTogglerBtn.classList.toggle('open');
     for (let i = 0; i < totalSection; i++) {
         allSection[i].classList.toggle('open');
     }
+}
+
+// Contact Form (Formspree)
+
+const contactForm = document.querySelector('#contactForm');
+
+if (contactForm) {
+    const formStatus = contactForm.querySelector('#form-status');
+
+    contactForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        formStatus.textContent = 'Sending...';
+        formStatus.className = '';
+
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(function(response){
+            if (response.ok) {
+                formStatus.textContent = 'Thanks! Your message has been sent.';
+                formStatus.className = 'success';
+                contactForm.reset();
+            } else {
+                formStatus.textContent = 'Something went wrong. Please email me directly instead.';
+                formStatus.className = 'error';
+            }
+        })
+        .catch(function(){
+            formStatus.textContent = 'Something went wrong. Please email me directly instead.';
+            formStatus.className = 'error';
+        })
+        .finally(function(){
+            submitBtn.disabled = false;
+        });
+    });
 }
