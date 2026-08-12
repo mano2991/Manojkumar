@@ -1,14 +1,65 @@
 
-// Preloader
+// Auto-calculate age from birthday
 
-window.addEventListener('load', function(){
-    document.querySelector('.preloader').classList.add('opacity-0');
-    setTimeout(function(){
-        document.querySelector('.preloader').style.display = 'none';
-    }, 1000);
-});
+(function () {
+    const ageEl = document.getElementById('age-value');
+    if (!ageEl) return;
+    const birthDate = new Date(1991, 8, 29); // 29 September 1991
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const hasHadBirthdayThisYear =
+        today.getMonth() > birthDate.getMonth() ||
+        (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+    if (!hasHadBirthdayThisYear) age--;
+    ageEl.textContent = age;
+})();
 
-// iTyped 
+// Publications pagination — show N per page, with page-dot navigation
+
+(function () {
+    const PER_PAGE = 5;
+    const list = document.querySelector('.publication-list'),
+        pagination = document.getElementById('pubPagination');
+    if (!list || !pagination) return;
+
+    const cards = Array.from(list.children).filter(function (el) {
+        return el.classList.contains('publication-card');
+    });
+    const pageCount = Math.ceil(cards.length / PER_PAGE);
+    if (pageCount <= 1) return;
+
+    let currentPage = 0;
+
+    function renderDots() {
+        pagination.innerHTML = '';
+        for (let i = 0; i < pageCount; i++) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'pub-page-dot';
+            dot.textContent = String(i + 1);
+            dot.setAttribute('aria-label', 'Page ' + (i + 1) + ' of ' + pageCount);
+            if (i === currentPage) dot.classList.add('active');
+            dot.addEventListener('click', function () {
+                goToPage(i);
+            });
+            pagination.appendChild(dot);
+        }
+    }
+
+    function goToPage(page) {
+        currentPage = page;
+        cards.forEach(function (card, i) {
+            const cardPage = Math.floor(i / PER_PAGE);
+            card.style.display = cardPage === currentPage ? '' : 'none';
+        });
+        renderDots();
+        list.closest('.section').scrollTop = 0;
+    }
+
+    goToPage(0);
+})();
+
+// iTyped
 
 window.ityped.init(document.querySelector('.iTyped'), {
     strings: ["I'm a Bioinformatician", "I'm a Computational Neurobiologist", "I'm a Software Developer", "I'm a Web Developer", "I'm a Wildlife Photographer", "I'm a Gamer", "I love cooking"],
@@ -22,7 +73,7 @@ const filterContainer = document.querySelector('.portfolio-filter'),
     totalFilterBtn = filterBtns.length,
     portfolioItems = document.querySelectorAll('.portfolio-item'),
     totalPortfolioItem = portfolioItems.length;
-    
+
     for (let i = 0; i < totalFilterBtn; i++) {
         filterBtns[i].addEventListener("click", function(){
             filterContainer.querySelector('.active').classList.remove('active');
@@ -45,149 +96,65 @@ const filterContainer = document.querySelector('.portfolio-filter'),
         });
     }
 
-// Portfolio Lighbox
+// Sidebar — mobile toggle
 
-const lightbox = document.querySelector('.lightbox'),
-    lightboxImg = lightbox.querySelector('.lightbox-img'),
-    lightboxText = lightbox.querySelector('.caption-text'),
-    lightboxClose = lightbox.querySelector('.lightbox-close'),
-    lightboxCounter = lightbox.querySelector('.caption-counter');
+const navToggler = document.getElementById('navToggler'),
+    sidebar = document.getElementById('sidebar');
 
-let itemIndex = 0;
+if (navToggler && sidebar) {
+    navToggler.addEventListener('click', function () {
+        navToggler.classList.toggle('open');
+        sidebar.classList.toggle('open');
+        const expanded = navToggler.classList.contains('open');
+        navToggler.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
 
-for (let i = 0; i < totalPortfolioItem; i++) {
-    portfolioItems[i].addEventListener('click', function(){
-        itemIndex = i;
-        changeItem();
-        toggleLightbox();
+    sidebar.querySelectorAll('a[data-nav]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navToggler.classList.remove('open');
+            sidebar.classList.remove('open');
+            navToggler.setAttribute('aria-expanded', 'false');
+        });
     });
 }
 
-function toggleLightbox() {
-    lightbox.classList.toggle('open');
+// Panel navigation — one full-screen section active at a time, with slide transition
+
+const navLinks = document.querySelectorAll('[data-nav]'),
+    panels = document.querySelectorAll('main .section');
+
+function setActiveNav(id) {
+    navLinks.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('data-nav') === id);
+    });
 }
 
-function changeItem() {
-    let imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
-    lightboxImg.src = imgSrc;
-    lightboxText.innerHTML = portfolioItems[itemIndex].querySelector('h4').innerHTML;
-    lightboxCounter.innerHTML = (itemIndex + 1) + " of " + totalPortfolioItem;
+function goToSection(id) {
+    const target = document.getElementById(id);
+    if (!target || target.classList.contains('active')) return;
+
+    panels.forEach(function (panel) {
+        if (panel.classList.contains('active')) {
+            panel.classList.remove('active');
+            panel.classList.add('back-section');
+        } else if (panel !== target) {
+            panel.classList.remove('back-section');
+        }
+    });
+
+    target.classList.remove('back-section');
+    target.classList.add('active');
+    target.scrollTop = 0;
+
+    setActiveNav(id);
 }
 
-function prevItem() {
-    if (itemIndex === 0) {
-        itemIndex = totalPortfolioItem - 1;
-    } else {
-        itemIndex--;
-    }
-    changeItem();
-}
-
-function nextItem() {
-    if (itemIndex === totalPortfolioItem - 1) {
-        itemIndex = 0;
-    } else {
-        itemIndex++;
-    }
-    changeItem();
-}
-
-// close lightbox
-
-lightbox.addEventListener('click', function(event){
-    if(event.target === lightboxClose || event.target === lightbox){
-        toggleLightbox();
-    }
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToSection(link.getAttribute('data-nav'));
+    });
 });
-
-// Aside Navbar
-
-const nav = document.querySelector('.nav'),
-    navList = nav.querySelectorAll('li'),
-    totalNavList = navList.length,
-    allSection = document.querySelectorAll('.section'),
-    totalSection = allSection.length;
-
-for (let i = 0; i < totalNavList; i++) {
-    const a = navList[i].querySelector('a');
-    a.addEventListener('click', function(){
-        // remove back section class
-        removeBackSectionClass();
-
-        for (let j = 0; j < totalNavList; j++) {
-            if (navList[j].querySelector('a').classList.contains('active')) {
-                // add back section class
-                addBackSectionClass(j);
-            }
-            navList[j].querySelector('a').classList.remove('active');
-        }
-
-        this.classList.add('active');
-
-        showSection(this);
-
-        if (window.innerWidth < 1200) {
-            asideSectionTogglerBtn();
-        }
-
-    });
-}
-
-function addBackSectionClass(num) 
-{
-    allSection[num].classList.add('back-section');
-}
-
-function removeBackSectionClass() 
-{
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove('back-section');
-    }
-}
-
-function updateNav(element) 
-{
-    for (let i = 0; i < totalNavList; i++) {
-        navList[i].querySelector('a').classList.remove('active');
-        const target = element.getAttribute('href').split('#')[1];
-        if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
-            navList[i].querySelector('a').classList.add('active');
-        }
-    }
-}
-
-// document.querySelector('.hire-me').addEventListener('click', function(){
-//    const sectionIndex = this.getAttribute('data-section-index');
-//    addBackSectionClass(sectionIndex);
-//    showSection(this);
-//    updateNav(this);
-//    removeBackSectionClass();
-//});
-
-function showSection(element) 
-{
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove('active');
-    }
-
-    const target = element.getAttribute('href').split('#')[1];
-
-    document.querySelector('#'+target).classList.add('active');
-}
-
-const navTogglerBtn = document.querySelector('.nav-toggler'),
-    aside = document.querySelector('.aside');
-
-navTogglerBtn.addEventListener('click', asideSectionTogglerBtn);
-
-function asideSectionTogglerBtn()
-{
-    aside.classList.toggle('open');
-    navTogglerBtn.classList.toggle('open');
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.toggle('open');
-    }
-}
 
 // Contact Form (Formspree)
 

@@ -7,862 +7,826 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Template css Files -->
   <link rel="stylesheet" href="css/style.css" type="text/css">
-
-  <!-- Live Style Switcher - Demo Only  -->
-  <link rel="stylesheet" class="alternate-style" title="pink" href="css/skins/pink.css" type="text/css" >
-  <link rel="stylesheet" class="alternate-style" title="blue" href="css/skins/blue.css" type="text/css" disabled>
-  <link rel="stylesheet" class="alternate-style" title="green" href="css/skins/green.css" type="text/css" disabled>
-  <link rel="stylesheet" class="alternate-style" title="orange" href="css/skins/orange.css" type="text/css" disabled>
-  <link rel="stylesheet" class="alternate-style" title="yellow" href="css/skins/yellow.css" type="text/css" disabled>
-  <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css">
 </head>
 
 <body class="light">
 
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="loader">
+  <!-- Mobile Nav Toggler -->
+  <button type="button" class="nav-toggler" id="navToggler" aria-label="Toggle menu" aria-controls="sidebar" aria-expanded="false">
+    <span></span>
+  </button>
 
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <a href="#home" class="sidebar-logo" data-nav="home">Manoj<span>.</span></a>
+
+      <nav class="sidebar-links" id="sidebarLinks">
+        <a href="#home" class="active" data-nav="home"><i class="fa fa-home"></i> Home</a>
+        <a href="#about" data-nav="about"><i class="fa fa-user"></i> About</a>
+        <a href="#publications" data-nav="publications"><i class="fa fa-list"></i> Publications</a>
+        <a href="#tools" data-nav="tools"><i class="fa fa-flask"></i> Tools</a>
+        <a href="#service" data-nav="service"><i class="fa fa-briefcase"></i> Services</a>
+        <a href="#testimonial" data-nav="testimonial"><i class="fa fa-quote-left"></i> Testimonials</a>
+        <a href="#contact" data-nav="contact"><i class="fa fa-comments"></i> Contact</a>
+      </nav>
+
+      <div class="copyright-text">
+        &copy; 2025 manojkumar kumaran
+      </div>
     </div>
+  </aside>
+  <!-- Sidebar End -->
+
+  <!-- Theme Toggle -->
+  <div class="theme-switcher">
+    <button type="button" class="theme-toggle-btn" title="Toggle dark mode" aria-label="Toggle dark mode">
+      <i class="fa fa-moon-o"></i>
+      <i class="fa fa-sun-o"></i>
+    </button>
   </div>
-  <!-- Preloader End -->
+  <!-- Theme Toggle End -->
 
-  <!-- Main Container -->
-  <div class="main-container">
-    <!-- Aside -->
-    <div class="aside">
-      <!-- Nav Toggler Btn -->
-      <div class="nav-toggler">
-        <span></span>
-      </div>
-      <div class="aside-inner">
-        <!-- Logo -->
-        <div class="logo">
-          <a href="#">Manoj</a>
+  <main>
+
+    <!-- Home / Hero Section -->
+    <section class="home section active" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">Computational Neurobiologist &middot; Bioinformatician</p>
+          <h1 class="hero-name">Manojkumar<br>Kumaran</h1>
+          <p class="hero-role">PhD &middot; Research Associate, CSIR&#8209;CCMB</p>
+          <p class="hero-typed"><span class="iTyped"></span></p>
+
+          <div class="social-links">
+            <a href="https://x.com/manoj290991" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/k.manojkumar2991" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/manojkumar-kumaran-57991543/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/mano2991" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.researchgate.net/profile/Manoj-Kumar-103?ev=hdr_xprf" target="_blank" rel="noopener noreferrer"><i class="fa fa-graduation-cap"></i></a>
+            <a href="https://scholar.google.com/citations?user=lNn8_CAAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-book"></i></a>
+            <a href="https://orcid.org/0000-0003-0255-6144" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="fa fa-id-card-o"></i></a>
+          </div>
         </div>
-        <!-- Nav -->
-        <ul class="nav">
-          <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-          <li><a href="#publications"><i class="fa fa-list"></i> Publications</a></li>
-          <li><a href="#tools"><i class="fa fa-flask"></i> Tools</a></li>
-          <li><a href="#service"><i class="fa fa-briefcase"></i> Services</a></li>
-          <li><a href="#testimonial"><i class="fa fa-quote-left"></i> Testimonials</a></li>
-          <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
-        </ul>
-        <!-- Copyright -->
-        <div class="copyright-text">
-          &copy; 2025 manojkumar kumaran
+
+        <div class="hero-visual">
+          <img src="images/manoj_profile.jpg" alt="profile" class="hero-photo shadow-dark-1">
         </div>
       </div>
-    </div>
-    <!-- Aside End -->
-    <!-- Main Content -->
-    <div class="main-content">
+    </section>
+    <!-- Home Section End -->
 
-      <!-- Home Section -->
-      <section class="home section active" id="home">
-        <div class="container">
-          <div class="intro">
-            <img src="images/manoj_1.jpg" alt="profile" class="shadow-dark-1">
-            <h1>Manojkumar Kumaran</h1>
-            <span class="iTyped"></span>
-            <div class="social-links">
-              <a href="https://x.com/manoj290991" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/k.manojkumar2991" target="_blank"><i class="fa fa-facebook"></i></a>
-              <!-- <a href="https://www.instagram.com/k.manojkumar2991/" target="_blank"><i class="fa fa-instagram"></i></a> -->
-              <a href="https://www.linkedin.com/in/manojkumar-kumaran-57991543/" target="_blank"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/mano2991" target="_blank"><i class="fa fa-github"></i></a>
-              <a href="https://www.researchgate.net/profile/Manoj-Kumar-103?ev=hdr_xprf" target="_blank" rel="noopener noreferrer"><i class="fa fa-graduation-cap"></i></a>
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container-wide">
+        <div class="section-title">
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-split">
+          <div class="about-lede">
+            <h3>Hi! I'm Manojkumar Kumaran<br><span>&mdash; Bioinformatician</span></h3>
+            <blockquote class="pull-quote">
+              &ldquo;I thrive on solving complex biological problems using computational tools and data&#8209;driven insights.&rdquo;
+            </blockquote>
+          </div>
+          <div class="about-text">
+            <p>
+              I am a Computational Neurobiologist and Software Developer passionate about understanding the molecular and circuit mechanisms underlying neurological disorders and regeneration.
+              I specialize in single-cell multi-omics, Hi-C, ChIP-seq, and ATAC-seq analysis, integrating computational and experimental approaches to study axon regeneration, neurodegeneration, and brain plasticity.
+              My research focuses on how genomic architecture, transcription factors, and chromatin accessibility shape neuronal function in health and disease.
+              Beyond research, I have extensive experience in software development, building automated bioinformatics pipelines, and applying machine learning for large-scale genomic analysis.
+              I thrive on solving complex biological problems using computational tools and data-driven insights.
+              In my free time, I enjoy wildlife photography, gaming, and cooking.
+            </p>
+          </div>
+        </div>
+
+        <div class="personal-info">
+          <div class="info-item">
+            <p>Birthday <span>29 September 1991</span></p>
+          </div>
+          <div class="info-item">
+            <p>Age <span id="age-value">33</span></p>
+          </div>
+          <div class="info-item">
+            <p>Email <span>manojkumarbioinfo@gmail.com</span></p>
+          </div>
+          <div class="info-item">
+            <p>Degree <span>PhD</span></p>
+          </div>
+          <div class="info-item">
+            <p>Phone <span>+91 7708556754</span></p>
+          </div>
+          <div class="info-item">
+            <p>City <span>Madurai</span></p>
+          </div>
+          <div class="info-item">
+            <p>Freelance <span>Available</span></p>
+          </div>
+          <div class="info-item">
+            <p>Nationality <span>Indian</span></p>
+          </div>
+          <div class="info-item">
+            <p>Languages <span>English, Tamil</span></p>
+          </div>
+          <div class="info-item">
+            <p>Current Role <span>Research Associate</span></p>
+          </div>
+          <div class="info-item">
+            <p>Research Interests <span>Multi-Omics, AI in Neuroscience</span></p>
+          </div>
+          <div class="info-item">
+            <p>Hobbies <span>Wildlife Photography, Gaming, Cooking</span></p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="Manoj_CV.pdf" target="_blank" class="btn">Download Cv</a>
+        </div>
+
+        <div class="skills">
+          <h3 class="title">Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <h5>Shell, Python, R, Docker</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 86%;"></div>
+                <div class="skill-porcent">86%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Clinical WES/WGS Sequecning analysis</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 90%;"></div>
+                <div class="skill-porcent">90%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Single Cell Genomics sequecning analysis</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 80%;"></div>
+                <div class="skill-porcent">80%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Bulk ATAC, Chip, Cut&amp;Run, HiC analysis</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 75%;"></div>
+                <div class="skill-porcent">75%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Structural bioinformatics</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 85%;"></div>
+                <div class="skill-porcent">85%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Machine Learning, Animal Behavior</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 75%;"></div>
+                <div class="skill-porcent">75%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Java, Html, Bootstrap</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 60%;"></div>
+                <div class="skill-porcent">60%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <h5>Server and Network Manager</h5>
+              <div class="progress">
+                <div class="progress-in" style="width: 80%;"></div>
+                <div class="skill-porcent">80%</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Home Section End -->
 
-      <!-- About Section -->
-      <section class="about section" id="about">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>About Me</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="about-content padd-15">
-              <div class="row">
-                <div class="about-text padd-15">
-                  <h3>Hi! I'm Manojkumar Kumaran and <span>Bioinformatician</span></h3>
-                  <p style="text-align: justify;">
-                      I am a Computational Neurobiologist and Software Developer passionate about understanding the molecular and circuit mechanisms underlying neurological disorders and regeneration. 
-                      I specialize in single-cell multi-omics, Hi-C, ChIP-seq, and ATAC-seq analysis, integrating computational and experimental approaches to study axon regeneration, neurodegeneration, and brain plasticity. 
-                      My research focuses on how genomic architecture, transcription factors, and chromatin accessibility shape neuronal function in health and disease.
-                      Beyond research, I have extensive experience in software development, building automated bioinformatics pipelines, and applying machine learning for large-scale genomic analysis.
-                      I thrive on solving complex biological problems using computational tools and data-driven insights.
-                      In my free time, I enjoy wildlife photography, gaming, and cooking.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="personal-info padd-15">
-                  <div class="row">
-                    <div class="info-item padd-15">
-                      <p>Birthday : <span>29 September 1991</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Age : <span>33</span></p>
-                    </div>
-                      <!-- <div class="info-item padd-15">
-                      <p>Website : <span>www.domain.com</span></p>
-                    </div> -->
-                    <div class="info-item padd-15">
-                      <p>Email : <span>manojkumarbioinfo@gmail.com</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Degree : <span>PhD</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Phone : <span>+91 7708556754</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>City : <span>Madurai</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Freelance : <span>Available</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Nationality : <span>Indian</span></p>
-                  </div>
-                  <div class="info-item padd-15">
-                    <p>Languages : <span>English, Tamil</span></p>
-                </div>
-                <div class="info-item padd-15">
-                  <p>Current Role : <span>Research Associate</span></p>
-                </div>
-                <div class="info-item padd-15">
-                  <p>Research Interests : <span>Multi-Omics, AI in Neuroscience</span></p>
-              </div>
-              <div class="info-item padd-15">
-                <p>Hobbies : <span>Wildlife Photography, Gaming, Cooking</span></p>
-            </div>
-            
-                 </div>
-                  <div class="row">
-                    <div class="buttons padd-15">
-                      <a href="Manoj_CV.pdf" target="_blank" class="btn">Download Cv</a>
-                      <!-- <a href="#contact" data-section-index="1" class="btn hire-me">Hire me</a> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="skills padd-15">
-                  <div class="row">
-                    <div class="skill-item padd-15">
-                      <h5>Shell, Python, R, Docker </h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 86%;"></div>
-                        <div class="skill-porcent">
-                          86%
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Clinical WES/WGS Sequecning analysis</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 90%;"></div>
-                        <div class="skill-porcent">
-                          90%
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Single Cell Genomics sequecning analysis</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 80%;"></div>
-                        <div class="skill-porcent">
-                          80%
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Bulk ATAC, Chip, Cut&Run, HiC analysis</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-porcent">
-                          75%
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Structural bioinformatics </h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 85%;"></div>
-                        <div class="skill-porcent">
-                          85%
-                        </div>
-                      </div>
-                     </div>
-                     <div class="skill-item padd-15">
-                      <h5>Machine Learning, Animal Behavior </h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-porcent">
-                          75%
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Java, Html, Bootstrap</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 60%;"></div>
-                        <div class="skill-porcent">
-                          60%
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Server and Network Manager</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 80%;"></div>
-                        <div class="skill-porcent">
-                          80%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="education padd-15">
-                  <h3 class="title">Education</h3>
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-                      <div class="timeline shadow-dark">
-                        <!-- timeline Item -->
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2015 - 2021</h6>
-                          <h4 class="timeline-title">PhD In bioinformatics, at Arvind Medical Research Foundation</h4>
-                          <p class="timeline-text">
-                            I developed an eye disease-specific variant prioritization tool, <b>eyeVarP</b>, which utilizes a random forest algorithm to analyze pathogenic variants associated with eye diseases and other disorders.  
-                            Additionally, I created the <b>VarP</b> tool, a generalized pipeline designed to filter missense and insertion-deletion variants and predict their pathogenicity from exome or genome sequencing data.
-                        </p>
-                        </div>
-                        <!-- timeline Item End -->
-                        <!-- timeline Item -->
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2009 - 2015</h6>
-                          <h4 class="timeline-title">Master of Technology (M.Tech) in Bioinformatics</h4>
-                          <p class="timeline-text">
-                              I pursued a <b>six-year integrated M.Tech program in Bioinformatics</b> at Bharathidasan University, gaining expertise in computational biology, genomics, proteomics, and data-driven research methodologies.  
-                              Throughout my academic journey, I developed a strong foundation in biological data analysis, machine learning applications in genomics, structural bioinformatics, and molecular modeling.  
-                              I actively worked on research projects related to genome sequencing, variant analysis, and computational drug discovery, equipping myself with both wet-lab and computational skills essential for bioinformatics research.  
-                          </p>
-                        </div>
-                        <!-- timeline Item End -->
-                        <!-- timeline Item 
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2008 - 2011</h6>
-                          <h4 class="timeline-title">Bachelor Degree</h4>
-                          <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non
-                            nisi semper, et elementum lorem ornare.</p>
-                        </div>
-                         timeline Item End -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="experience padd-15">
-                  <h3 class="title">Experience</h3>
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-                        <div class="timeline shadow-dark">
-                            <!-- Timeline Item -->
-                            <div class="timeline-item">
-                                <div class="circle-dot"></div>
-                                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2022 - Present</h6>
-                                <h4 class="timeline-title">Research Associate, CSIR-CCMB</h4>
-                                <p class="timeline-text">
-                                    Developed an automated pipeline for analyzing single-cell RNA-seq, single-cell ATAC-seq, CUT&RUN, Hi-C, and bulk ATAC-seq data.  
-                                    Built a machine learning model for mouse behavioral analysis.  
-                                    Maintained the lab website and the GitHub repository.
-                                </p>
-                            </div>
-                            <!-- Timeline Item End -->
-                
-                            <!-- Timeline Item -->
-                            <div class="timeline-item">
-                                <div class="circle-dot"></div>
-                                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2021 - 2022</h6>
-                                <h4 class="timeline-title">Data Scientist, INDX Technologies</h4>
-                                <p class="timeline-text">
-                                    Developed an automated tool for analyzing Whole Exome Sequencing (WES) data from cancer patient datasets.  
-                                    Created an automated annotation tool to classify genetic variants based on available drug information.
-                                </p>
-                            </div>
-                            <!-- Timeline Item End -->
-                
-                            <!-- Timeline Item -->
-                            <div class="timeline-item">
-                                <div class="circle-dot"></div>
-                                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2015 - 2021</h6>
-                                <h4 class="timeline-title">Junior Research Fellow, Aravind Medical Research Foundation</h4>
-                                <p class="timeline-text">
-                                    Developed and benchmarked analytical tools and pipelines for Next-Generation Sequencing (NGS) data.  
-                                    Applied biostatistics and bioinformatics algorithms to integrate multi-level biological data with functional genomics for hypothesis generation, variant identification, and variant prioritization.  
-                                    Collaborated across multiple disciplines and contributed to various research projects.  
-                                    Maintained the lab website and the GitHub repository.
-                                </p>
-                            </div>
-                            <!-- Timeline Item End -->
-                        </div>
-                    </div>
-                </div>
-                
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- About Section End -->
-
-      <!-- publication Section -->
-      <section class="publication section" id="publications">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Publications</h2>
-              <br>
-              <br>
-              <p style="color: var(--text-color)">Total Citations: 91 | H-index: 4 | Research Score: 69.5 | Reads: 3840</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="publications">
-    <div class="publication-list">
-        <!-- Paper  - 2026 -->
-
-        <div class="publication-card">
-          <h4><a href="https://link.springer.com/article/10.1007/s11262-026-02235-w" target="_blank">
-              Genomic analysis identifies unreported adaptive mutations in monkeypox virus immune evasion genes.
-          </a></h4>
-          <p><strong>John ASS, Manojkumar Kumaran et al.</strong> <i>Virus Genes</i> (2026)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Transcription factors are potent levers for neural repair, but systematic pipelines to uncover factors that unlock adult corticospinal regeneration are lacking. By intersecting developmental RNA-seq with ATAC-seq footprints, we pinpointed two nuclear-receptor transcription factors—NR2F1 and NR2F6, neither previously linked to CNS axon growth—as top candidates. Forced expression of either factor doubled neurite length in culture, and each proved highly effective in vivo: after unilateral pyramidotomy they drove robust midline sprouting, while after complete thoracic crush they supported long-tract CST regeneration that restored hip lift, partial swing trajectories and grip strength. Multi-omics dissection revealed complementary mechanisms: NR2F1 re-engaged chromatin-remodelling and cytoskeletal networks, whereas NR2F6, via a conserved corepressor domain, imposed a broad translational down-shift, bound predominantly to distal enhancers and re-packaged chromatin into new topologically associating domains that cluster growth genes with freshly activated regulatory hubs. These discoveries establish NR2F1 and NR2F6 as novel pro-regenerative TFs, demonstrate their potency across lesion types, and expose repression-driven translational control and enhancer–TAD reconfiguration as previously unrecognised axes of CNS repair.</p>
-          </details>
-        </div>
-
-         <div class="publication-card">
-          <h4><a href="https://www.biorxiv.org/content/10.64898/2026.03.12.711224v1" target="_blank">
-              Rewiring of the three-dimensional genome encodes regenerative potential in the adult central nervous system.
-          </a></h4>
-          <p><strong>Menon AS, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>The failure of adult central nervous system neurons to regenerate after injury has been attributed to transcriptional and epigenetic barriers, but whether three-dimensional genome organization constitutes an independent regulatory layer encoding regenerative potential remains unknown. Here we present the first genome-wide map of chromatin compartments, topologically associating domains, and loops across postnatal development, adult homeostasis, and spinal cord injury in the mouse motor cortex. Postnatal maturation progressively consolidates a growth-restrictive three-dimensional architecture, and spinal cord injury alone partially reverses this consolidation, re-engaging neonatal gene programs through reorganized but functionally recapitulative architecture despite minimal transcriptional activation. This reversion is directed rather than stochastic, preferentially targeting pro-growth gene networks, and reveals a latent three-dimensional memory of developmental growth states in the adult cortical genome. Strikingly, NR2F6, a transcription factor that promotes corticospinal axon regeneration, extends this reversion beyond the neonatal state toward an earlier embryonic chromatin configuration, a depth of developmental plasticity that injury alone cannot reach. These findings establish three-dimensional genome topology as a regulatory layer encoding regenerative potential in adult cortical neurons, demonstrating that successful CNS regeneration requires accessing embryonic rather than merely neonatal chromatin states, and reframing regenerative failure as a topological problem with new therapeutic targets.</p>
-          </details>
-          <p class="data-link"><a href="https://hicviz.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the Hi-C Data (hicviz)</a></p>
-        </div>
-
-        <div class="publication-card">
-          <h4><a href="https://www.biorxiv.org/content/10.64898/2025.12.22.695949v1" target="_blank">
-              PATZ1 remodels the nucleosome landscape to promote chromatin accessibility in injured neurons.
-          </a></h4>
-          <p><strong>Krishna N, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Adult central nervous system neurons fail to regenerate after injury, in part due to epigenetic constraints that maintain a growth-restrictive chromatin state. We previously showed that the transcription factor PATZ1 reprograms chromatin accessibility in injured corticospinal neurons to promote axon regeneration, but the underlying mechanism remained unclear. Here we use nucleosome-resolution profiling to reveal that PATZ1 induces widespread nucleosome eviction at regeneration-associated gene loci. PATZ1 treatment dramatically reduces both nucleosome occupancy and fuzziness, indicating active chromatin remodeling rather than passive destabilization. This remodeling occurs preferentially at distal regulatory elements, where PATZ1 drives a greater than 3-fold expansion of H3K27ac-marked active enhancers. Nucleosome eviction at these sites precedes enhancer activation, establishing a mechanistic link between chromatin remodeling and transcriptional reprogramming. Our findings demonstrate that targeted nucleosome eviction at enhancers underlies PATZ1-mediated chromatin reorganization, providing mechanistic insight into how epigenetic barriers to CNS regeneration can be overcome.</p>
-          </details>
-          <p class="data-link"><a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snATAC/snRNA Data (patz1)</a></p>
-        </div>
-         
-        <div class="publication-card">
-          <h4><a href="https://www.biorxiv.org/content/10.1101/2025.06.19.660319v1" target="_blank">
-              Nuclear receptor transcription factors promote axon regeneration in the adult corticospinal tract.
-          </a></h4>
-          <p><strong>Sahu Y, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Transcription factors are potent levers for neural repair, but systematic pipelines to uncover factors that unlock adult corticospinal regeneration are lacking. By intersecting developmental RNA-seq with ATAC-seq footprints, we pinpointed two nuclear-receptor transcription factors—NR2F1 and NR2F6, neither previously linked to CNS axon growth—as top candidates. Forced expression of either factor doubled neurite length in culture, and each proved highly effective in vivo: after unilateral pyramidotomy they drove robust midline sprouting, while after complete thoracic crush they supported long-tract CST regeneration that restored hip lift, partial swing trajectories and grip strength. Multi-omics dissection revealed complementary mechanisms: NR2F1 re-engaged chromatin-remodelling and cytoskeletal networks, whereas NR2F6, via a conserved corepressor domain, imposed a broad translational down-shift, bound predominantly to distal enhancers and re-packaged chromatin into new topologically associating domains that cluster growth genes with freshly activated regulatory hubs. These discoveries establish NR2F1 and NR2F6 as novel pro-regenerative TFs, demonstrate their potency across lesion types, and expose repression-driven translational control and enhancer–TAD reconfiguration as previously unrecognised axes of CNS repair.</p>
-          </details>
-          <p class="data-link"><a href="https://nrtf.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snRNA Data (nrtf)</a></p>
-        </div>
-
-         <div class="publication-card">
-          <h4><a href="https://www.biorxiv.org/content/10.1101/2025.11.05.686894v1" target="_blank">
-              Targeting RARβ with a stable retinoic acid mimic promotes neurite outgrowth, neurogenesis, and behavioural recovery.
-          </a></h4>
-          <p><strong>Sanyal K, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Injury to the adult central nervous system triggers minimal axonal regeneration, partly due to the limited activation of intrinsic growth programs. Retinoic acid (RA) signaling has been shown to promote modest regenerative responses, but its clinical utility is restricted by poor biochemical stability and short-lived receptor engagement. Here, we report small molecule based synthetic RA mimic, DM04, that stabilizes RA-like signaling and enhances regenerative outcomes. DM04 promoted neurite outgrowth in primary neurons, upregulated canonical RA-responsive genes, and supported neural induction from human iPSCs. In a murine spinal injury model, DM04 treatment improved motor recovery. Transcriptomic analysis revealed shared target gene activation between RA and DM04, along with unique enrichment of extracellular matrix remodeling pathways. These findings establish DM04 as a chemically stable modulator of RA signaling with dual efficacy in injury and developmental contexts, highlighting its promise as a candidate for regenerative therapeutics.</p>
-          </details>
-        </div>
-
-       <div class="publication-card">
-          <h4><a href="https://www.biorxiv.org/content/10.1101/2025.09.18.676567v1" target="_blank">
-              Deep Neurite Analysis Tool (DeNAT): A machine-learning framework for precise automated neurite outgrowth measurement.
-          </a></h4>
-          <p><strong>Manojkumar Kumaran, Athul Narayan PS et al.</strong> <i>biorxiv</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Accurate quantification of neurite sprouting after injury is a critical step in axon regeneration research. Yet it remains a major bottleneck, as the current gold standard relies on manual counting by multiple blinded observers. This process is slow, labor-intensive, and prone to variability. While some software can measure total neurite length, they aren’t made to specifically measure new growth in complicated images from real-life injury models, like the thoracic crush and pyramidotomy model. Existing software can measure total neurite length in culture, but it is not designed to capture new growth in complex images from injury models, such as thoracic crush or pyramidotomy. Crucially, these tools lack the ability to selectively analyze growth within user-defined regions, a key requirement for injury paradigms. To address this need, we developed the Deep Neurite Analysis Tool (DeNAT), an accessible deep-learning–based platform that automatically measures neurite outgrowth after injury. DeNAT allows users to define regions of interest to specifically quantify sprouting in images from common spinal cord injury paradigms. We benchmarked its performance against manual scoring and conventional automated approaches. DeNAT achieved 87 percent accuracy in detecting neurite sprouts relative to manual counts, while reducing variability and labor. By combining user-guided region selection with automated deep learning analysis, DeNAT offers an accurate, reproducible, and efficient solution for measuring neurite outgrowth in injury models.</p>
-          </details>
-          <p class="data-link"><a href="https://neuriteanalysis.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-rocket"></i> Try the DeNAT Tool</a></p>
-        </div>
-      
-      <div class="publication-card">
-          <h4><a href="https://www.biorxiv.org/content/10.1101/2025.05.14.654166v1" target="_blank">
-              PATZ1 Reinstates a Growth-Permissive Chromatin Landscape in Adult Corticospinal Neurons After Injury
-          </a></h4>
-          <p><strong>Anisha S Menon, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Our research reveals how nerve cell growth genes become restricted during development through two distinct waves of chromatin closure. We found that injuries closer to the brain trigger broader chromatin hanges than distant injuries. Importantly, introducing the PATZ1 transcription factor after injury successfully reopened chromatin and reactivated developmental growth pathways. This work defines the timing of  hromatin restriction in CNS neurons and demonstrates it can be reversed to potentially support regeneration.</p>
-          </details>
-          <p class="data-link"><a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snATAC/snRNA Data (patz1)</a></p>
-        </div>
-        <!-- Paper 1 - 2025 -->
-        <div class="publication-card">
-          <h4><a href="https://www.jneurosci.org/content/early/2025/01/01/JNEUROSCI.1508-24.2024" target="_blank">
-              Single-nuclei sequencing reveals a robust corticospinal response to nearby axotomy but overall insensitivity to spinal injury
-          </a></h4>
-          <p><strong>Manojkumar Kumaran et al.</strong> <i>Journal of Neuroscience</i> (2025)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>The ability of neurons to sense and respond to damage is crucial for maintaining homeostasis and facilitating nervous system repair. For some cell types, notably dorsal root ganglia and retinal ganglion cells, extensive profiling has uncovered a significant transcriptional response to axon injury, which influences survival and regenerative outcomes. In contrast, the injury responses of most supraspinal cell types, which display limited regeneration after spinal damage, remain mostly unknown. In this study, we used single-nuclei sequencing in adult male and female mice to profile the transcriptional responses of diverse supraspinal cell types to spinal injury. Surprisingly, thoracic spinal injury induced only modest changes in gene expression across all populations, including corticospinal tract (CST) neurons. Additionally, CST neurons exhibited minimal response to cervical injury but showed a much stronger reaction to intracortical axotomy, with upregulation of numerous regeneration and apoptosis-related transcripts shared with injured DRG and RGC neurons. Thus, the muted response of CST neurons to spinal injury is linked to the injury's distal location, rather than intrinsic cellular characteristics. More broadly, these findings indicate that a central challenge for enhancing regeneration after a spinal injury is the limited detection of distant injuries and the subsequent modest baseline neuronal response.</p>
-          </details>
-        </div>
-
-        <!-- Paper 2 - 2024 -->
-        <div class="publication-card">
-          <h4><a href="https://www.nature.com/articles/s10038-024-01267-0" target="_blank">
-              Investigating druggable kinases for targeted therapy in cancer
-          </a></h4>
-          <p><strong>Kumar Jeyaprakash, Manojkumar Kumaran et al.</strong> <i>Journal of Human Genetics</i> (2024)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Retinoblastoma (RB) is a childhood retinal neoplasm and commonly treated with cytotoxic chemotherapeutic agents. However, these therapeutic approaches often lead to diverse adverse effects. A precise molecular therapy will alleviate these side effects and offer better treatment outcomes. Over the years, kinases have become potential drug targets in cancer therapy. Hence, we aimed to investigate genetic alterations of putative kinase drug targets in RB. Targeted exome sequencing was performed on 35 RB tumors with paired blood samples using a gene panel consisting of 29 FDA-approved kinase genes. Single nucleotide variants were analyzed for pathogenicity using an in-house pipeline and copy number variations (CNVs) were detected by a depth of coverage and CNVPanelizer. The correlation between genetic changes and clinicopathological features was assessed using GraphPad Prism. Three somatic mutations, two in ERBB4 and one in EGFR were identified. Two of these mutations (ERBB4 c.C3836A & EGFR c.A1196T) were not reported earlier. CNV analysis revealed recurrent gains of ALK, MAP2K2, SRC, STK11, and FGFR3 as well as frequent losses of ATM, PI3KCA and ERBB4. Notably, nonresponsive tumors had a higher incidence of amplifications in clinically actionable genes such as ALK. Moreover, ALK gain and ATM loss were strongly correlated with optic nerve head invasion. In conclusion, our study revealed genetic alterations of druggable kinases in RB, providing preliminary insights for the exploration of kinase-targeted therapy in RB.</p>
-          </details>
-        </div>
-
-        <!-- Paper 3 - 2024 -->
-        <div class="publication-card">
-          <h4><a href="https://aacrjournals.org/cancerres/article/83/2_Supplement_2/PR007/712515/Abstract-PR007-Comprehensive-ctDNA-profiling" target="_blank">
-              Comprehensive ctDNA profiling reveals potential resistance mechanisms
-          </a></h4>
-          <p><strong>Shafi, Gowhar , Manojkumar Kumaran et al.</strong> <i>Cancer Research</i> (2024)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Background: Genomic profiling has revolutionized precision oncology impacting the diagnosis, prognosis, and therapy decisions. Considering high spatiotemporal diversity and heterogenicity of breast tumor-cell genomes, small-gene panels often fail to capture rare but important genomic alterations. Conversely, comprehensive ctDNA sequencing approaches enable the identification of under characterized 'long tailed driver' genomic alterations and capture Intra and inter metastatic heterogeneity. Here, we demonstrate the clinical utility of comprehensive genome profiling with higher sensitivity to predict the possibility of metastasis in early-stage breast cancer patients. Methods: We retrospectively analyzed ctDNA and genomic DNA (gDNA) from FFPE samples as well as circulating tumor cells (CTC) in 10 treatment-naive hormone positive and HER2 negative, primary-stage breast cancer patients [GS1] using the OncoIndx comprehensive 600 gene panel. The panel captures all important cancer-relevant genomic alterations including Tumor Mutation Burden (TMB), Micro Satellite Instability (MSI), homologous recombination deficiency (HRD) prediction, and cfDNA tumor fraction (TF). CTCs were enumerated from 1.5 ml of blood using the OncoDiscover platform approved by the Drug Controller General of India having anti-EpCAM antibody-mediated immunomagnetic nanoparticles. CTCs were confirmed for cytokeratin 18+ and DAPI + markers and the absence of CD45. Results: Comprehensive genomic profile obtained from ctDNA and gDNA from FFPE of early-stage breast cancer patients predominantly exhibited the presence of alterations in PIK3CA and ESR1 signaling pathways. PIK3CAmutations were present in 77% and 44% of baseline ctDNA and gDNA samples, while ESR1 mutations were present in 44% and 22% of baseline ctDNA and gDNA, respectively. In addition, we observed about 70% additional driver mutations in ctDNA samples suggesting shedding of ctDNA together with CTC (80% positive), a likely positive biomarker of metastasis. About 50% of the patients showed higher TMB and HRD. Notably, TF representing ctDNA varied between 13% to 27% in blood samples with a corresponding ploidy range of 2.9 to 4.7. Surprisingly, ~50% of the patient population matched the mutation profile of clinically confirmed metastatic patients. All the patients harboring potential metastatic driver alterations showed the presence of CTCs in peripheral blood. Conclusions: Comprehensive ctDNA genomic profiling showed potential metastasis driving alterations suggesting the role of ctDNA-based liquid biopsy to predict metastasis in early breast cancer patients. We observed enhanced TF at the time of diagnosis, possibly due to the presence of distant metastasis, high disease burden, and aggressive tumor biology. Our results suggest that ctDNA dynamics at the time of disease presentation can predict early metastasis, and may demonstrate the divergent response of tumor heterogeneity to treatment in early-stage breast cancer.</p>
-          </details>
-        </div>
-
-        <!-- Paper 4 - 2023 -->
-        <div class="publication-card">
-          <h4><a href="https://www.sciencedirect.com/science/article/pii/S1098360023008754" target="_blank">
-              eyeVarP: a computational framework for the identification of pathogenic variants specific to eye disease
-          </a></h4>
-          <p><strong>Manojkumar Kumaran et al.</strong> <i>Genetics in Medicine</i> (2023)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Purpose: Disease-specific pathogenic variant prediction tools that differentiate pathogenic variants from benign have been improved through disease specificity recently. However, they have not been evaluated on disease-specific pathogenic variants compared with other diseases, which would help to prioritize disease-specific variants from several genes or novel genes. Thus, we hypothesize that features of pathogenic variants alone would provide a better model. Methods: We developed an eye disease–specific variant prioritization tool (eyeVarP), which applied the random forest algorithm to the data set of pathogenic variants of eye diseases and other diseases. We also developed the VarP tool and generalized pipeline to filter missense and insertion-deletion variants and predict their pathogenicity from exome or genome sequencing data, thus we provide a complete computational procedure. Results:eyeVarP outperformed pan disease–specific tools in identifying eye disease–specific pathogenic variants under the top 10. VarP outperformed 12 pathogenicity prediction tools with an accuracy of 95% in correctly identifying the pathogenicity of missense and insertion-deletion variants. The complete pipeline would help to develop disease-specific tools for other genetic disorders. Conclusion:eyeVarP performs better in identifying eye disease–specific pathogenic variants using pathogenic variant features and gene features. Implementing such complete computational procedure would significantly improve the clinical variant interpretation for specific diseases.</p>
-          </details>
-        </div>
-
-        <!-- Paper 5 - 2021 -->
-        <div class="publication-card">
-          <h4><a href="https://pubmed.ncbi.nlm.nih.gov/34751623/" target="_blank">
-              Clinical reassessments and whole-exome sequencing
-          </a></h4>
-          <p><strong>Manojkumar Kumaran et al.</strong> <i>Ophthalmic Genetics</i> (2021)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Background: The diagnosis of retinal dystrophies can be challenging due to the spectrum of protean phenotypic manifestations. This study employed trio-whole-exome sequencing (trio-WES) to unveil the genetic cause of an inherited retinal disorder in a south Indian family. Materials and methods: Proband's initial ophthalmic examinations was performed in the year 2016. WES was performed on a proband-parent trio to identify causative mutation followed by Sanger validation, segregation analysis, sequence and structure-based computational analysis to assess its pathogenicity. Based on the genetic findings, detailed clinical reassessments were performed in year 2020 for the proband and available family members. Results: WES revealed a novel homozygous BEST1 mutation c.G310A (p.D104N) in the proband and heterozygous for the parents, indicating autosomal recessive inheritance. Segregation analysis showed heterozygous mutation in maternal grandfather and normal genotype for younger brother and maternal grandmother. Moreover, the structure-based analysis revealed the mutation p.D104N in the cytoplasmic domain, causing structural hindrance by altering hydrogen bonds and destabilizing the BEST1 protein structure. Proband's clinical assessments were consistent with autosomal recessive bestrophinopathy (ARB) phenotype. Additionally, characteristic absent light rise and decreased light peak-to-dark trough ratio (LP:DT) was observed bilaterally in EOG. Conclusions: Our study demonstrates the utility of WES and clinical re-evaluations in establishing the precise diagnosis of autosomal recessive bestrophinopathy associated with a novel mutation, thus expanding the BEST1-related mutation spectrum.</p>
-          </details>
-        </div>
-
-        <!-- Paper 6 - 2021 -->
-        <div class="publication-card">
-          <h4><a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003005926-7/bioinformatics-whole-exome-studies-manojkumar-kumaran-bharanidharan-devarajan" target="_blank">
-              Bioinformatics for Whole Exome Studies
-          </a></h4>
-          <p><strong>Manojkumar Kumaran et al.</strong> <i>Bioinformatics and Human Genomics Research</i> (2021)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Recent advances in next-generation sequencing (NGS) methods have greatly promoted the NGS-based genome/exome studies in discovering genetic variants for human diseases. Whole-genome sequencing (WGS) remains prohibitively expensive and requires concurrent development of bioinformatics approaches. Whole exome sequencing (WES), focusing on only the protein-coding sequence of the human genome, is now a widely used cost-effective approach that could identify disease-causing variants. Here, we provide the performance assessment of various aligners and variant calling tools using simulated and standard human exome datasets and highlight their combinations that improve the detection of single nucleotide variants (SNVs) and InDels. Further, we provide general recommendations for bioinformatic analysis for WES methods, focusing on variant filtering and prioritization for clinical use.</p>
-          </details>
-        </div>
-
-        <!-- Paper 7 - 2021 -->
-        <div class="publication-card">
-          <h4><a href="https://pubmed.ncbi.nlm.nih.gov/34427245/" target="_blank">
-              Whole-exome sequencing identifies multiple pathogenic variants
-          </a></h4>
-          <p><strong>Manojkumar Kumaran et al.</strong> <i>Indian Journal of Ophthalmology</i> (2021)</p>
-          <details>
-              <summary>Show Abstract</summary>
-              <p>Purpose: To identify the pathogenic variants associated with primary open-angle glaucoma (POAG) using whole-exome sequencing (WES) data of a large South Indian family. Methods: We recruited a large five-generation South Indian family (n = 84) with a positive family history of POAG (n = 19). All study participants had a comprehensive ocular evaluation. We performed WES for 16 samples (nine POAG and seven unaffected controls) since Sanger sequencing of the POAG candidate genes (MYOC, OPTN, and TBK1) showed no genetic variation. We used an in-house pipeline for prioritizing the pathogenic variants based on their segregation among the POAG individual. Results: We identified one novel and five low-frequency pathogenic variants with consistent co-segregation in all affected individuals. The variant c.G3719A in RPGR-interacting domain of RPGRIP1 that segregated heterozygously with the six POAG cases is distinct from variants causing photoreceptor dystrophies, reported affecting the RPGR protein complex signaling in primary cilia. The cilia in trabecular meshwork (TM) cells has been reported to mediate the intraocular pressure (IOP) sensation. Furthermore, we identified a novel c.A1295G variant in Rho guanine nucleotide exchange factors Gene 40 (ARHGEF40) and a likely pathogenic variant in the RPGR gene, suggesting that they may alter the RhoA activity essential for IOP regulation. Conclusion: Our study supports that low-frequency pathogenic variants in multiple genes and pathways probably affect Primary Open Angle Glaucoma's pathogenesis in the large South Indian family. Furthermore, it requires larger case-controls to perform family-based association tests and to strengthen our analysis.</p>
-          </details>
-        </div>
-
-        <!-- Paper 8 - 2020 -->
-        <div class="publication-card">
-          <h4><a href="https://pubmed.ncbi.nlm.nih.gov/31934596/" target="_blank">
-              Genetic characterization of Stargardt clinical cases
-          </a></h4>
-          <p><strong>Raj, Rajendran Kadarkarai, Manojkumar Kumaran et al.</strong> <i>Eye and Vision</i> (2020)</p>
-
-          <details>
-              <summary>Show Abstract</summary>
-              <p>
-
-                Background: Stargardt disease 1 (STGD1; MIM 248200) is a monogenic form of autosomal recessive genetic disease caused by mutation in ABCA4. This gene has a major role in hydrolyzing N-retinylidene-phosphatidylethanolamine to all-trans-retinal and phosphatidylethanolamine. The purpose of this study is to identify the frequency of putative disease-causing mutations associated with Stargardt disease in a South Indian population.
-              </p> <p>  
-                Methods: A total of 28 clinically diagnosed Stargardt-like phenotype patients were recruited from south India. Ophthalmic examination of all patients was carefully carried out by a retina specialist based on the stages of fundus imaging and ERG grouping. Genetic analysis of ABCA4 was performed for all patients using Sanger sequencing and clinical exome sequencing.
-              </p> <p> 
-                Results: This study identified disease-causing mutations in ABCA4 in 75% (21/28) of patients, 7% (2/28) exhibited benign variants and 18% (5/28) were negative for the disease-causing mutation.
-              </p> <p>
-                Conclusion: This is the first study describing the genetic association of ABCA4 disease-causing mutation in South Indian Stargardt 1 patients (STGD1). Our findings highlighted the presence of two novel missense mutations and an (in/del, single base pair deletion & splice variant) in ABCA4. However, genetic heterogeneity in ABCA4 mutants requires a larger sample size to establish a true correlation with clinical phenotype.
+        <div class="timeline-split">
+          <div class="education">
+            <h3 class="title">Education</h3>
+            <div class="timeline shadow-dark">
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2015 - 2021</h6>
+                <h4 class="timeline-title">PhD In bioinformatics, at Arvind Medical Research Foundation</h4>
+                <p class="timeline-text">
+                  I developed an eye disease-specific variant prioritization tool, <b>eyeVarP</b>, which utilizes a random forest algorithm to analyze pathogenic variants associated with eye diseases and other disorders.
+                  Additionally, I created the <b>VarP</b> tool, a generalized pipeline designed to filter missense and insertion-deletion variants and predict their pathogenicity from exome or genome sequencing data.
                 </p>
-          </details>
+              </div>
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2009 - 2015</h6>
+                <h4 class="timeline-title">Master of Technology (M.Tech) in Bioinformatics</h4>
+                <p class="timeline-text">
+                  I pursued a <b>six-year integrated M.Tech program in Bioinformatics</b> at Bharathidasan University, gaining expertise in computational biology, genomics, proteomics, and data-driven research methodologies.
+                  Throughout my academic journey, I developed a strong foundation in biological data analysis, machine learning applications in genomics, structural bioinformatics, and molecular modeling.
+                  I actively worked on research projects related to genome sequencing, variant analysis, and computational drug discovery, equipping myself with both wet-lab and computational skills essential for bioinformatics research.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="experience">
+            <h3 class="title">Experience</h3>
+            <div class="timeline shadow-dark">
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2022 - Present</h6>
+                <h4 class="timeline-title">Research Associate, CSIR-CCMB</h4>
+                <p class="timeline-text">
+                  Developed an automated pipeline for analyzing single-cell RNA-seq, single-cell ATAC-seq, CUT&amp;RUN, Hi-C, and bulk ATAC-seq data.
+                  Built a machine learning model for mouse behavioral analysis.
+                  Maintained the lab website and the GitHub repository.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2021 - 2022</h6>
+                <h4 class="timeline-title">Data Scientist, INDX Technologies</h4>
+                <p class="timeline-text">
+                  Developed an automated tool for analyzing Whole Exome Sequencing (WES) data from cancer patient datasets.
+                  Created an automated annotation tool to classify genetic variants based on available drug information.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2015 - 2021</h6>
+                <h4 class="timeline-title">Junior Research Fellow, Aravind Medical Research Foundation</h4>
+                <p class="timeline-text">
+                  Developed and benchmarked analytical tools and pipelines for Next-Generation Sequencing (NGS) data.
+                  Applied biostatistics and bioinformatics algorithms to integrate multi-level biological data with functional genomics for hypothesis generation, variant identification, and variant prioritization.
+                  Collaborated across multiple disciplines and contributed to various research projects.
+                  Maintained the lab website and the GitHub repository.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+    <!-- About Section End -->
 
-        <!-- Paper 9 - 2019 -->
-        <div class="publication-card">
-            <h4><a href="https://pubmed.ncbi.nlm.nih.gov/31208315/" target="_blank">
-                Performance assessment of variant calling pipeline using human whole exome sequencing and simulated data
-            </a></h4>
-            <p><strong>Manojkumar Kumaran et al.</strong> <i>BMC Bioinformatics</i> (2019)</p>
+    <!-- publication Section -->
+    <section class="publication section" id="publications">
+      <div class="container-wide">
+        <div class="section-title">
+          <h2>Publications</h2>
+          <p class="pub-stats">Total Citations: 91 | H-index: 4 | Research Score: 69.5 | Reads: 3840</p>
+        </div>
 
-            <details>
-                <summary>Show Abstract</summary>
-                <p>
+        <div class="publication-list">
+          <!-- Paper - 2026 -->
 
-                  Background: Whole exome sequencing (WES) is a cost-effective method that identifies clinical variants but it demands accurate variant caller tools. Currently available tools have variable accuracy in predicting specific clinical variants. But it may be possible to find the best combination of aligner-variant caller tools for detecting accurate single nucleotide variants (SNVs) and small insertion and deletion (InDels) separately. Moreover, many important aspects of InDel detection are overlooked while comparing the performance of tools, particularly its base pair length.
-                </p> <p>
-                  Results: We assessed the performance of variant calling pipelines using the combinations of four variant callers and five aligners on human NA12878 and simulated exome data. We used high confidence variant calls from Genome in a Bottle (GiaB) consortium for validation, and GRCh37 and GRCh38 as the human reference genome. Based on the performance metrics, both BWA and Novoalign aligners performed better with DeepVariant and SAMtools callers for detecting SNVs, and with DeepVariant and GATK for InDels. Furthermore, we obtained similar results on human NA24385 and NA24631 exome data from GiaB.
-                </p> <p>
-                  Conclusion: In this study, DeepVariant with BWA and Novoalign performed best for detecting accurate SNVs and InDels. The accuracy of variant calling was improved by merging the top performing pipelines. The results of our study provide useful recommendations for analysis of WES data in clinical genomics.
+          <div class="publication-card">
+            <span class="pub-year">2026</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.64898/2026.08.05.742960v1" target="_blank">
+                  KiMA: Kinematic Motion Analysis for Spinal Cord Injury Research
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Manojkumar Kumaran, Siva Shanmugam N R, Ishwariya Venkatesh</strong> <i>biorxiv</i> (2026)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Accurate quantification of locomotor recovery is essential for evaluating therapeutic outcomes in spinal cord injury (SCI) models. Manual scoring systems remain observer-dependent, and commercial gait-analysis platforms are costly and proprietary. Markerless pose-estimation tools such as DeepLabCut generate accurate body-part coordinates, but converting these coordinates into biologically meaningful locomotor parameters typically requires custom programming and multiple external tools. We developed KiMA (Kinematic Motion Analysis), an open-source, browser-based suite for integrated analysis of rodent gait and hindlimb kinematics. KiMA accepts DeepLabCut coordinate files and performs automated coordinate parsing, stick-figure reconstruction, frame-by-frame movement inspection, and single- and multi-sample analysis, with dedicated workflows for ladder and rung analysis, footfall detection, and CatWalk gait analysis. The platform quantifies joint angles (metatarsophalangeal, ankle, knee, hip, and pelvic), stride length, stride width, cadence, stance and swing durations, paw-contact events, swing clearance, and locomotor symmetry, and supports cohort-level comparisons, correlation analysis, principal component analysis, and export of processed datasets and publication-quality figures. Because KiMA runs entirely within a standard web browser, it requires no software installation or local programming environment, supporting cross-platform accessibility and data privacy. By unifying gait quantification, visualization, and multivariate analysis in a single interface, KiMA lowers the computational barrier to markerless locomotor analysis and helps researchers detect subtle functional recovery after SCI.</p>
+              </details>
+              <p class="data-link"><a href="https://kimasuite.in/" target="_blank" class="data-link-btn"><i class="fa fa-rocket"></i> Try Kima Suite</a></p>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2026</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.64898/2026.07.24.740479v1" target="_blank">
+                  Combinatorial Control of Corticospinal Axon Growth by Retinoic Acid Receptors
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Yogesh Sahu, Athul PS Narayan, Manojkumar Kumaran, Shringika Soni, Prakash Chermakani, Dhruvakumar Kesireddy, Meghana Konda, Anisha S Menon, Ishwariya Venkatesh</strong> <i>biorxiv</i> (2026)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Regeneration of central nervous system (CNS) axons depends on Transcription Factors (TFs) that reactivate developmental growth programs, yet most such factors remain unknown. By intersecting developmental chromatin binding with pro-growth gene networks, we identified two retinoic acid receptor transcription factors, RARA and RARG, whose occupancy at growth-associated genes is progressively lost as neurons mature. Restoring both factors together increased neurite outgrowth beyond either alone in two independent systems, the Neuro-2a cell line and primary cortical neurons. In vivo, the same combination drove cross-midline sprouting after pyramidotomy and long-tract regeneration after thoracic spinal cord crush, with concordant recovery of hindlimb gait and grip strength. Interestingly, neither receptor alone was sufficient, hinting at combinatorial regulation. Single-nucleus transcriptomics delineated that only the combination reactivated relevant cytoskeletal and gene-expression programs, while genome-wide binding maps showed that RARA and RARG partition the regulatory landscape, with RARG dominating promoters and RARA occupying distal enhancers, so that neither receptor reconstitutes the developmental growth state alone. Intriguingly, this cooperative requirement was specific to the CNS: in peripheral sensory neurons, RARG alone was sufficient and RARA was dispensable. These data identify RARA and RARG as novel cooperative regulators of regenerative axon growth in mammalian CNS and PNS neurons and potential targets for therapeutic intervention.</p>
+              </details>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2026</span>
+            <div class="pub-body">
+              <h4><a href="https://link.springer.com/article/10.1007/s11262-026-02235-w" target="_blank">
+                  Genomic analysis identifies unreported adaptive mutations in monkeypox virus immune evasion genes.
+              </a></h4>
+              <span class="journal-badge">Virus Genes</span>
+              <p><strong>John ASS, Manojkumar Kumaran et al.</strong> <i>Virus Genes</i> (2026)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Transcription factors are potent levers for neural repair, but systematic pipelines to uncover factors that unlock adult corticospinal regeneration are lacking. By intersecting developmental RNA-seq with ATAC-seq footprints, we pinpointed two nuclear-receptor transcription factors—NR2F1 and NR2F6, neither previously linked to CNS axon growth—as top candidates. Forced expression of either factor doubled neurite length in culture, and each proved highly effective in vivo: after unilateral pyramidotomy they drove robust midline sprouting, while after complete thoracic crush they supported long-tract CST regeneration that restored hip lift, partial swing trajectories and grip strength. Multi-omics dissection revealed complementary mechanisms: NR2F1 re-engaged chromatin-remodelling and cytoskeletal networks, whereas NR2F6, via a conserved corepressor domain, imposed a broad translational down-shift, bound predominantly to distal enhancers and re-packaged chromatin into new topologically associating domains that cluster growth genes with freshly activated regulatory hubs. These discoveries establish NR2F1 and NR2F6 as novel pro-regenerative TFs, demonstrate their potency across lesion types, and expose repression-driven translational control and enhancer–TAD reconfiguration as previously unrecognised axes of CNS repair.</p>
+              </details>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.64898/2026.03.12.711224v1" target="_blank">
+                  Rewiring of the three-dimensional genome encodes regenerative potential in the adult central nervous system.
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Menon AS, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>The failure of adult central nervous system neurons to regenerate after injury has been attributed to transcriptional and epigenetic barriers, but whether three-dimensional genome organization constitutes an independent regulatory layer encoding regenerative potential remains unknown. Here we present the first genome-wide map of chromatin compartments, topologically associating domains, and loops across postnatal development, adult homeostasis, and spinal cord injury in the mouse motor cortex. Postnatal maturation progressively consolidates a growth-restrictive three-dimensional architecture, and spinal cord injury alone partially reverses this consolidation, re-engaging neonatal gene programs through reorganized but functionally recapitulative architecture despite minimal transcriptional activation. This reversion is directed rather than stochastic, preferentially targeting pro-growth gene networks, and reveals a latent three-dimensional memory of developmental growth states in the adult cortical genome. Strikingly, NR2F6, a transcription factor that promotes corticospinal axon regeneration, extends this reversion beyond the neonatal state toward an earlier embryonic chromatin configuration, a depth of developmental plasticity that injury alone cannot reach. These findings establish three-dimensional genome topology as a regulatory layer encoding regenerative potential in adult cortical neurons, demonstrating that successful CNS regeneration requires accessing embryonic rather than merely neonatal chromatin states, and reframing regenerative failure as a topological problem with new therapeutic targets.</p>
+              </details>
+              <p class="data-link"><a href="https://hicviz.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the Hi-C Data (hicviz)</a></p>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.64898/2025.12.22.695949v1" target="_blank">
+                  PATZ1 remodels the nucleosome landscape to promote chromatin accessibility in injured neurons.
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Krishna N, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Adult central nervous system neurons fail to regenerate after injury, in part due to epigenetic constraints that maintain a growth-restrictive chromatin state. We previously showed that the transcription factor PATZ1 reprograms chromatin accessibility in injured corticospinal neurons to promote axon regeneration, but the underlying mechanism remained unclear. Here we use nucleosome-resolution profiling to reveal that PATZ1 induces widespread nucleosome eviction at regeneration-associated gene loci. PATZ1 treatment dramatically reduces both nucleosome occupancy and fuzziness, indicating active chromatin remodeling rather than passive destabilization. This remodeling occurs preferentially at distal regulatory elements, where PATZ1 drives a greater than 3-fold expansion of H3K27ac-marked active enhancers. Nucleosome eviction at these sites precedes enhancer activation, establishing a mechanistic link between chromatin remodeling and transcriptional reprogramming. Our findings demonstrate that targeted nucleosome eviction at enhancers underlies PATZ1-mediated chromatin reorganization, providing mechanistic insight into how epigenetic barriers to CNS regeneration can be overcome.</p>
+              </details>
+              <p class="data-link"><a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snATAC/snRNA Data (patz1)</a></p>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.1101/2025.06.19.660319v1" target="_blank">
+                  Nuclear receptor transcription factors promote axon regeneration in the adult corticospinal tract.
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Sahu Y, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Transcription factors are potent levers for neural repair, but systematic pipelines to uncover factors that unlock adult corticospinal regeneration are lacking. By intersecting developmental RNA-seq with ATAC-seq footprints, we pinpointed two nuclear-receptor transcription factors—NR2F1 and NR2F6, neither previously linked to CNS axon growth—as top candidates. Forced expression of either factor doubled neurite length in culture, and each proved highly effective in vivo: after unilateral pyramidotomy they drove robust midline sprouting, while after complete thoracic crush they supported long-tract CST regeneration that restored hip lift, partial swing trajectories and grip strength. Multi-omics dissection revealed complementary mechanisms: NR2F1 re-engaged chromatin-remodelling and cytoskeletal networks, whereas NR2F6, via a conserved corepressor domain, imposed a broad translational down-shift, bound predominantly to distal enhancers and re-packaged chromatin into new topologically associating domains that cluster growth genes with freshly activated regulatory hubs. These discoveries establish NR2F1 and NR2F6 as novel pro-regenerative TFs, demonstrate their potency across lesion types, and expose repression-driven translational control and enhancer–TAD reconfiguration as previously unrecognised axes of CNS repair.</p>
+              </details>
+              <p class="data-link"><a href="https://nrtf.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snRNA Data (nrtf)</a></p>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.1101/2025.11.05.686894v1" target="_blank">
+                  Targeting RARβ with a stable retinoic acid mimic promotes neurite outgrowth, neurogenesis, and behavioural recovery.
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Sanyal K, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Injury to the adult central nervous system triggers minimal axonal regeneration, partly due to the limited activation of intrinsic growth programs. Retinoic acid (RA) signaling has been shown to promote modest regenerative responses, but its clinical utility is restricted by poor biochemical stability and short-lived receptor engagement. Here, we report small molecule based synthetic RA mimic, DM04, that stabilizes RA-like signaling and enhances regenerative outcomes. DM04 promoted neurite outgrowth in primary neurons, upregulated canonical RA-responsive genes, and supported neural induction from human iPSCs. In a murine spinal injury model, DM04 treatment improved motor recovery. Transcriptomic analysis revealed shared target gene activation between RA and DM04, along with unique enrichment of extracellular matrix remodeling pathways. These findings establish DM04 as a chemically stable modulator of RA signaling with dual efficacy in injury and developmental contexts, highlighting its promise as a candidate for regenerative therapeutics.</p>
+              </details>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.1101/2025.09.18.676567v1" target="_blank">
+                  Deep Neurite Analysis Tool (DeNAT): A machine-learning framework for precise automated neurite outgrowth measurement.
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Manojkumar Kumaran, Athul Narayan PS et al.</strong> <i>biorxiv</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Accurate quantification of neurite sprouting after injury is a critical step in axon regeneration research. Yet it remains a major bottleneck, as the current gold standard relies on manual counting by multiple blinded observers. This process is slow, labor-intensive, and prone to variability. While some software can measure total neurite length, they aren’t made to specifically measure new growth in complicated images from real-life injury models, like the thoracic crush and pyramidotomy model. Existing software can measure total neurite length in culture, but it is not designed to capture new growth in complex images from injury models, such as thoracic crush or pyramidotomy. Crucially, these tools lack the ability to selectively analyze growth within user-defined regions, a key requirement for injury paradigms. To address this need, we developed the Deep Neurite Analysis Tool (DeNAT), an accessible deep-learning–based platform that automatically measures neurite outgrowth after injury. DeNAT allows users to define regions of interest to specifically quantify sprouting in images from common spinal cord injury paradigms. We benchmarked its performance against manual scoring and conventional automated approaches. DeNAT achieved 87 percent accuracy in detecting neurite sprouts relative to manual counts, while reducing variability and labor. By combining user-guided region selection with automated deep learning analysis, DeNAT offers an accurate, reproducible, and efficient solution for measuring neurite outgrowth in injury models.</p>
+              </details>
+              <p class="data-link"><a href="https://neuriteanalysis.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-rocket"></i> Try the DeNAT Tool</a></p>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.biorxiv.org/content/10.1101/2025.05.14.654166v1" target="_blank">
+                  PATZ1 Reinstates a Growth-Permissive Chromatin Landscape in Adult Corticospinal Neurons After Injury
+              </a></h4>
+              <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
+              <p><strong>Anisha S Menon, Manojkumar Kumaran et al.</strong> <i>biorxiv</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Our research reveals how nerve cell growth genes become restricted during development through two distinct waves of chromatin closure. We found that injuries closer to the brain trigger broader chromatin hanges than distant injuries. Importantly, introducing the PATZ1 transcription factor after injury successfully reopened chromatin and reactivated developmental growth pathways. This work defines the timing of  hromatin restriction in CNS neurons and demonstrates it can be reversed to potentially support regeneration.</p>
+              </details>
+              <p class="data-link"><a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-bar-chart"></i> Explore the snATAC/snRNA Data (patz1)</a></p>
+            </div>
+          </div>
+
+          <!-- Paper 1 - 2025 -->
+          <div class="publication-card">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h4><a href="https://www.jneurosci.org/content/early/2025/01/01/JNEUROSCI.1508-24.2024" target="_blank">
+                  Single-nuclei sequencing reveals a robust corticospinal response to nearby axotomy but overall insensitivity to spinal injury
+              </a></h4>
+              <span class="journal-badge">Journal of Neuroscience</span>
+              <p><strong>Manojkumar Kumaran et al.</strong> <i>Journal of Neuroscience</i> (2025)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>The ability of neurons to sense and respond to damage is crucial for maintaining homeostasis and facilitating nervous system repair. For some cell types, notably dorsal root ganglia and retinal ganglion cells, extensive profiling has uncovered a significant transcriptional response to axon injury, which influences survival and regenerative outcomes. In contrast, the injury responses of most supraspinal cell types, which display limited regeneration after spinal damage, remain mostly unknown. In this study, we used single-nuclei sequencing in adult male and female mice to profile the transcriptional responses of diverse supraspinal cell types to spinal injury. Surprisingly, thoracic spinal injury induced only modest changes in gene expression across all populations, including corticospinal tract (CST) neurons. Additionally, CST neurons exhibited minimal response to cervical injury but showed a much stronger reaction to intracortical axotomy, with upregulation of numerous regeneration and apoptosis-related transcripts shared with injured DRG and RGC neurons. Thus, the muted response of CST neurons to spinal injury is linked to the injury's distal location, rather than intrinsic cellular characteristics. More broadly, these findings indicate that a central challenge for enhancing regeneration after a spinal injury is the limited detection of distant injuries and the subsequent modest baseline neuronal response.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 2 - 2024 -->
+          <div class="publication-card">
+            <span class="pub-year">2024</span>
+            <div class="pub-body">
+              <h4><a href="https://www.nature.com/articles/s10038-024-01267-0" target="_blank">
+                  Investigating druggable kinases for targeted therapy in cancer
+              </a></h4>
+              <span class="journal-badge">Journal of Human Genetics</span>
+              <p><strong>Kumar Jeyaprakash, Manojkumar Kumaran et al.</strong> <i>Journal of Human Genetics</i> (2024)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Retinoblastoma (RB) is a childhood retinal neoplasm and commonly treated with cytotoxic chemotherapeutic agents. However, these therapeutic approaches often lead to diverse adverse effects. A precise molecular therapy will alleviate these side effects and offer better treatment outcomes. Over the years, kinases have become potential drug targets in cancer therapy. Hence, we aimed to investigate genetic alterations of putative kinase drug targets in RB. Targeted exome sequencing was performed on 35 RB tumors with paired blood samples using a gene panel consisting of 29 FDA-approved kinase genes. Single nucleotide variants were analyzed for pathogenicity using an in-house pipeline and copy number variations (CNVs) were detected by a depth of coverage and CNVPanelizer. The correlation between genetic changes and clinicopathological features was assessed using GraphPad Prism. Three somatic mutations, two in ERBB4 and one in EGFR were identified. Two of these mutations (ERBB4 c.C3836A & EGFR c.A1196T) were not reported earlier. CNV analysis revealed recurrent gains of ALK, MAP2K2, SRC, STK11, and FGFR3 as well as frequent losses of ATM, PI3KCA and ERBB4. Notably, nonresponsive tumors had a higher incidence of amplifications in clinically actionable genes such as ALK. Moreover, ALK gain and ATM loss were strongly correlated with optic nerve head invasion. In conclusion, our study revealed genetic alterations of druggable kinases in RB, providing preliminary insights for the exploration of kinase-targeted therapy in RB.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 3 - 2024 -->
+          <div class="publication-card">
+            <span class="pub-year">2024</span>
+            <div class="pub-body">
+              <h4><a href="https://aacrjournals.org/cancerres/article/83/2_Supplement_2/PR007/712515/Abstract-PR007-Comprehensive-ctDNA-profiling" target="_blank">
+                  Comprehensive ctDNA profiling reveals potential resistance mechanisms
+              </a></h4>
+              <span class="journal-badge">Cancer Research</span>
+              <p><strong>Shafi, Gowhar , Manojkumar Kumaran et al.</strong> <i>Cancer Research</i> (2024)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Background: Genomic profiling has revolutionized precision oncology impacting the diagnosis, prognosis, and therapy decisions. Considering high spatiotemporal diversity and heterogenicity of breast tumor-cell genomes, small-gene panels often fail to capture rare but important genomic alterations. Conversely, comprehensive ctDNA sequencing approaches enable the identification of under characterized 'long tailed driver' genomic alterations and capture Intra and inter metastatic heterogeneity. Here, we demonstrate the clinical utility of comprehensive genome profiling with higher sensitivity to predict the possibility of metastasis in early-stage breast cancer patients. Methods: We retrospectively analyzed ctDNA and genomic DNA (gDNA) from FFPE samples as well as circulating tumor cells (CTC) in 10 treatment-naive hormone positive and HER2 negative, primary-stage breast cancer patients [GS1] using the OncoIndx comprehensive 600 gene panel. The panel captures all important cancer-relevant genomic alterations including Tumor Mutation Burden (TMB), Micro Satellite Instability (MSI), homologous recombination deficiency (HRD) prediction, and cfDNA tumor fraction (TF). CTCs were enumerated from 1.5 ml of blood using the OncoDiscover platform approved by the Drug Controller General of India having anti-EpCAM antibody-mediated immunomagnetic nanoparticles. CTCs were confirmed for cytokeratin 18+ and DAPI + markers and the absence of CD45. Results: Comprehensive genomic profile obtained from ctDNA and gDNA from FFPE of early-stage breast cancer patients predominantly exhibited the presence of alterations in PIK3CA and ESR1 signaling pathways. PIK3CAmutations were present in 77% and 44% of baseline ctDNA and gDNA samples, while ESR1 mutations were present in 44% and 22% of baseline ctDNA and gDNA, respectively. In addition, we observed about 70% additional driver mutations in ctDNA samples suggesting shedding of ctDNA together with CTC (80% positive), a likely positive biomarker of metastasis. About 50% of the patients showed higher TMB and HRD. Notably, TF representing ctDNA varied between 13% to 27% in blood samples with a corresponding ploidy range of 2.9 to 4.7. Surprisingly, ~50% of the patient population matched the mutation profile of clinically confirmed metastatic patients. All the patients harboring potential metastatic driver alterations showed the presence of CTCs in peripheral blood. Conclusions: Comprehensive ctDNA genomic profiling showed potential metastasis driving alterations suggesting the role of ctDNA-based liquid biopsy to predict metastasis in early breast cancer patients. We observed enhanced TF at the time of diagnosis, possibly due to the presence of distant metastasis, high disease burden, and aggressive tumor biology. Our results suggest that ctDNA dynamics at the time of disease presentation can predict early metastasis, and may demonstrate the divergent response of tumor heterogeneity to treatment in early-stage breast cancer.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 4 - 2023 -->
+          <div class="publication-card">
+            <span class="pub-year">2023</span>
+            <div class="pub-body">
+              <h4><a href="https://www.sciencedirect.com/science/article/pii/S1098360023008754" target="_blank">
+                  eyeVarP: a computational framework for the identification of pathogenic variants specific to eye disease
+              </a></h4>
+              <span class="journal-badge">Genetics in Medicine</span>
+              <p><strong>Manojkumar Kumaran et al.</strong> <i>Genetics in Medicine</i> (2023)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Purpose: Disease-specific pathogenic variant prediction tools that differentiate pathogenic variants from benign have been improved through disease specificity recently. However, they have not been evaluated on disease-specific pathogenic variants compared with other diseases, which would help to prioritize disease-specific variants from several genes or novel genes. Thus, we hypothesize that features of pathogenic variants alone would provide a better model. Methods: We developed an eye disease–specific variant prioritization tool (eyeVarP), which applied the random forest algorithm to the data set of pathogenic variants of eye diseases and other diseases. We also developed the VarP tool and generalized pipeline to filter missense and insertion-deletion variants and predict their pathogenicity from exome or genome sequencing data, thus we provide a complete computational procedure. Results:eyeVarP outperformed pan disease–specific tools in identifying eye disease–specific pathogenic variants under the top 10. VarP outperformed 12 pathogenicity prediction tools with an accuracy of 95% in correctly identifying the pathogenicity of missense and insertion-deletion variants. The complete pipeline would help to develop disease-specific tools for other genetic disorders. Conclusion:eyeVarP performs better in identifying eye disease–specific pathogenic variants using pathogenic variant features and gene features. Implementing such complete computational procedure would significantly improve the clinical variant interpretation for specific diseases.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 5 - 2021 -->
+          <div class="publication-card">
+            <span class="pub-year">2021</span>
+            <div class="pub-body">
+              <h4><a href="https://pubmed.ncbi.nlm.nih.gov/34751623/" target="_blank">
+                  Clinical reassessments and whole-exome sequencing
+              </a></h4>
+              <span class="journal-badge">Ophthalmic Genetics</span>
+              <p><strong>Manojkumar Kumaran et al.</strong> <i>Ophthalmic Genetics</i> (2021)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Background: The diagnosis of retinal dystrophies can be challenging due to the spectrum of protean phenotypic manifestations. This study employed trio-whole-exome sequencing (trio-WES) to unveil the genetic cause of an inherited retinal disorder in a south Indian family. Materials and methods: Proband's initial ophthalmic examinations was performed in the year 2016. WES was performed on a proband-parent trio to identify causative mutation followed by Sanger validation, segregation analysis, sequence and structure-based computational analysis to assess its pathogenicity. Based on the genetic findings, detailed clinical reassessments were performed in year 2020 for the proband and available family members. Results: WES revealed a novel homozygous BEST1 mutation c.G310A (p.D104N) in the proband and heterozygous for the parents, indicating autosomal recessive inheritance. Segregation analysis showed heterozygous mutation in maternal grandfather and normal genotype for younger brother and maternal grandmother. Moreover, the structure-based analysis revealed the mutation p.D104N in the cytoplasmic domain, causing structural hindrance by altering hydrogen bonds and destabilizing the BEST1 protein structure. Proband's clinical assessments were consistent with autosomal recessive bestrophinopathy (ARB) phenotype. Additionally, characteristic absent light rise and decreased light peak-to-dark trough ratio (LP:DT) was observed bilaterally in EOG. Conclusions: Our study demonstrates the utility of WES and clinical re-evaluations in establishing the precise diagnosis of autosomal recessive bestrophinopathy associated with a novel mutation, thus expanding the BEST1-related mutation spectrum.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 6 - 2021 -->
+          <div class="publication-card">
+            <span class="pub-year">2021</span>
+            <div class="pub-body">
+              <h4><a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003005926-7/bioinformatics-whole-exome-studies-manojkumar-kumaran-bharanidharan-devarajan" target="_blank">
+                  Bioinformatics for Whole Exome Studies
+              </a></h4>
+              <span class="journal-badge">Bioinformatics and Human Genomics Research</span>
+              <p><strong>Manojkumar Kumaran et al.</strong> <i>Bioinformatics and Human Genomics Research</i> (2021)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Recent advances in next-generation sequencing (NGS) methods have greatly promoted the NGS-based genome/exome studies in discovering genetic variants for human diseases. Whole-genome sequencing (WGS) remains prohibitively expensive and requires concurrent development of bioinformatics approaches. Whole exome sequencing (WES), focusing on only the protein-coding sequence of the human genome, is now a widely used cost-effective approach that could identify disease-causing variants. Here, we provide the performance assessment of various aligners and variant calling tools using simulated and standard human exome datasets and highlight their combinations that improve the detection of single nucleotide variants (SNVs) and InDels. Further, we provide general recommendations for bioinformatic analysis for WES methods, focusing on variant filtering and prioritization for clinical use.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 7 - 2021 -->
+          <div class="publication-card">
+            <span class="pub-year">2021</span>
+            <div class="pub-body">
+              <h4><a href="https://pubmed.ncbi.nlm.nih.gov/34427245/" target="_blank">
+                  Whole-exome sequencing identifies multiple pathogenic variants
+              </a></h4>
+              <span class="journal-badge">Indian Journal of Ophthalmology</span>
+              <p><strong>Manojkumar Kumaran et al.</strong> <i>Indian Journal of Ophthalmology</i> (2021)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>Purpose: To identify the pathogenic variants associated with primary open-angle glaucoma (POAG) using whole-exome sequencing (WES) data of a large South Indian family. Methods: We recruited a large five-generation South Indian family (n = 84) with a positive family history of POAG (n = 19). All study participants had a comprehensive ocular evaluation. We performed WES for 16 samples (nine POAG and seven unaffected controls) since Sanger sequencing of the POAG candidate genes (MYOC, OPTN, and TBK1) showed no genetic variation. We used an in-house pipeline for prioritizing the pathogenic variants based on their segregation among the POAG individual. Results: We identified one novel and five low-frequency pathogenic variants with consistent co-segregation in all affected individuals. The variant c.G3719A in RPGR-interacting domain of RPGRIP1 that segregated heterozygously with the six POAG cases is distinct from variants causing photoreceptor dystrophies, reported affecting the RPGR protein complex signaling in primary cilia. The cilia in trabecular meshwork (TM) cells has been reported to mediate the intraocular pressure (IOP) sensation. Furthermore, we identified a novel c.A1295G variant in Rho guanine nucleotide exchange factors Gene 40 (ARHGEF40) and a likely pathogenic variant in the RPGR gene, suggesting that they may alter the RhoA activity essential for IOP regulation. Conclusion: Our study supports that low-frequency pathogenic variants in multiple genes and pathways probably affect Primary Open Angle Glaucoma's pathogenesis in the large South Indian family. Furthermore, it requires larger case-controls to perform family-based association tests and to strengthen our analysis.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Paper 8 - 2020 -->
+          <div class="publication-card">
+            <span class="pub-year">2020</span>
+            <div class="pub-body">
+              <h4><a href="https://pubmed.ncbi.nlm.nih.gov/31934596/" target="_blank">
+                  Genetic characterization of Stargardt clinical cases
+              </a></h4>
+              <span class="journal-badge">Eye and Vision</span>
+              <p><strong>Raj, Rajendran Kadarkarai, Manojkumar Kumaran et al.</strong> <i>Eye and Vision</i> (2020)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>
+                    Background: Stargardt disease 1 (STGD1; MIM 248200) is a monogenic form of autosomal recessive genetic disease caused by mutation in ABCA4. This gene has a major role in hydrolyzing N-retinylidene-phosphatidylethanolamine to all-trans-retinal and phosphatidylethanolamine. The purpose of this study is to identify the frequency of putative disease-causing mutations associated with Stargardt disease in a South Indian population.
+                  </p> <p>
+                    Methods: A total of 28 clinically diagnosed Stargardt-like phenotype patients were recruited from south India. Ophthalmic examination of all patients was carefully carried out by a retina specialist based on the stages of fundus imaging and ERG grouping. Genetic analysis of ABCA4 was performed for all patients using Sanger sequencing and clinical exome sequencing.
+                  </p> <p>
+                    Results: This study identified disease-causing mutations in ABCA4 in 75% (21/28) of patients, 7% (2/28) exhibited benign variants and 18% (5/28) were negative for the disease-causing mutation.
+                  </p> <p>
+                    Conclusion: This is the first study describing the genetic association of ABCA4 disease-causing mutation in South Indian Stargardt 1 patients (STGD1). Our findings highlighted the presence of two novel missense mutations and an (in/del, single base pair deletion & splice variant) in ABCA4. However, genetic heterogeneity in ABCA4 mutants requires a larger sample size to establish a true correlation with clinical phenotype.
                   </p>
-            </details>
-        </div>
-       </div>
-</div>
-          
-           
-          </div>
-        </div>
-      </section>
-      <!-- publication Section End -->
-
-      <!-- Tools Section -->
-      <section class="tools section" id="tools">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Tools &amp; Software</h2>
-              <br>
-              <p style="color: var(--text-color)">Free, browser-based tools I've built for the axon regeneration and neuroscience research community — no installation required.</p>
+              </details>
             </div>
           </div>
-          <div class="row">
-            <div class="tool-grid">
-              <div class="tool-card">
-                <h4>Kima Suite</h4>
-                <p class="tool-tagline">Gait analysis for spinal cord injury research</p>
-                <p>A free, browser-based gait analysis suite built for researchers studying locomotor recovery after spinal cord injury. Kima takes pose-estimation data from DeepLabCut and turns it into publication-ready kinematic plots, gait parameters, and statistical summaries — all without installing any software.</p>
-                <div class="tool-links">
-                  <a href="https://kimasuite.in/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Launch Kima Suite</a>
+
+          <!-- Paper 9 - 2019 -->
+          <div class="publication-card">
+            <span class="pub-year">2019</span>
+            <div class="pub-body">
+              <h4><a href="https://pubmed.ncbi.nlm.nih.gov/31208315/" target="_blank">
+                  Performance assessment of variant calling pipeline using human whole exome sequencing and simulated data
+              </a></h4>
+              <span class="journal-badge">BMC Bioinformatics</span>
+              <p><strong>Manojkumar Kumaran et al.</strong> <i>BMC Bioinformatics</i> (2019)</p>
+              <details>
+                  <summary>Show Abstract</summary>
+                  <p>
+                    Background: Whole exome sequencing (WES) is a cost-effective method that identifies clinical variants but it demands accurate variant caller tools. Currently available tools have variable accuracy in predicting specific clinical variants. But it may be possible to find the best combination of aligner-variant caller tools for detecting accurate single nucleotide variants (SNVs) and small insertion and deletion (InDels) separately. Moreover, many important aspects of InDel detection are overlooked while comparing the performance of tools, particularly its base pair length.
+                  </p> <p>
+                    Results: We assessed the performance of variant calling pipelines using the combinations of four variant callers and five aligners on human NA12878 and simulated exome data. We used high confidence variant calls from Genome in a Bottle (GiaB) consortium for validation, and GRCh37 and GRCh38 as the human reference genome. Based on the performance metrics, both BWA and Novoalign aligners performed better with DeepVariant and SAMtools callers for detecting SNVs, and with DeepVariant and GATK for InDels. Furthermore, we obtained similar results on human NA24385 and NA24631 exome data from GiaB.
+                  </p> <p>
+                    Conclusion: In this study, DeepVariant with BWA and Novoalign performed best for detecting accurate SNVs and InDels. The accuracy of variant calling was improved by merging the top performing pipelines. The results of our study provide useful recommendations for analysis of WES data in clinical genomics.
+                  </p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-pagination" id="pubPagination"></div>
+      </div>
+    </section>
+    <!-- publication Section End -->
+
+    <!-- Tools Section -->
+    <section class="tools section" id="tools">
+      <div class="container-wide">
+        <div class="section-title">
+          <h2>Tools &amp; Software</h2>
+          <p>Free, browser-based tools I've built for the axon regeneration and neuroscience research community — no installation required.</p>
+        </div>
+
+        <div class="tool-grid">
+          <div class="tool-card">
+            <h4>Kima Suite</h4>
+            <p class="tool-tagline">Gait analysis for spinal cord injury research</p>
+            <p>A free, browser-based gait analysis suite built for researchers studying locomotor recovery after spinal cord injury. Kima takes pose-estimation data from DeepLabCut and turns it into publication-ready kinematic plots, gait parameters, and statistical summaries — all without installing any software.</p>
+            <div class="tool-links">
+              <a href="https://kimasuite.in/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Launch Kima Suite</a>
+              <a href="https://www.biorxiv.org/content/10.64898/2026.08.05.742960v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Read the Preprint</a>
+            </div>
+          </div>
+          <div class="tool-card">
+            <h4>DeNAT — Deep Neurite Analysis Tool</h4>
+            <p class="tool-tagline">Automated neurite outgrowth quantification</p>
+            <p>A machine-learning framework that automatically measures neurite outgrowth after CNS injury, letting users define regions of interest for injury paradigms like thoracic crush and pyramidotomy. DeNAT reaches 87% accuracy against manual scoring while cutting out observer variability and labor.</p>
+            <div class="tool-links">
+              <a href="https://neuriteanalysis.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Launch DeNAT</a>
+              <a href="https://www.biorxiv.org/content/10.1101/2025.09.18.676567v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Read the Preprint</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools-subtitle">
+          <h3>Interactive Data Portals</h3>
+          <p>Companion webpages where you can explore the results behind specific papers directly — built alongside the analysis, not general-purpose software.</p>
+        </div>
+
+        <div class="portal-grid">
+          <div class="portal-card">
+            <h4>HiCViz</h4>
+            <p>Explore the chromatin compartments, TADs, and loop maps behind our study of 3D genome rewiring and regenerative potential in the adult CNS.</p>
+            <div class="tool-links">
+              <a href="https://hicviz.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
+              <a href="https://www.biorxiv.org/content/10.64898/2026.03.12.711224v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
+            </div>
+          </div>
+          <div class="portal-card">
+            <h4>PATZ1 Explorer</h4>
+            <p>Browse the snATAC-seq and snRNA-seq data comparing PATZ1-treated versus injured corticospinal neurons.</p>
+            <div class="tool-links">
+              <a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
+              <a href="https://www.biorxiv.org/content/10.1101/2025.05.14.654166v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
+            </div>
+          </div>
+          <div class="portal-card">
+            <h4>NRTF Explorer</h4>
+            <p>Browse the snRNA-seq data behind the NR2F1/NR2F6 nuclear receptor transcription factor study in axon regeneration.</p>
+            <div class="tool-links">
+              <a href="https://nrtf.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
+              <a href="https://www.biorxiv.org/content/10.1101/2025.06.19.660319v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tools Section End -->
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="service">
+      <div class="container-wide">
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="portfolio-filter">
+          <button type="button" class="active" data-filter="all">All</button>
+          <button type="button" data-filter="web-design">Web Design</button>
+          <button type="button" data-filter="photography">Photography</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Portfolio Item 1 -->
+          <div class="portfolio-item" data-category="web-design">
+            <div class="portfolio-item-inner shadow-dark">
+              <a href="https://bdu-biodiversity.blogspot.com/p/blog-page_5459.html" target="_blank">
+                <div class="portfolio-img">
+                  <img src="images/portfolio/1.jpg" alt="Biodiversity Blog">
                 </div>
-              </div>
-              <div class="tool-card">
-                <h4>DeNAT — Deep Neurite Analysis Tool</h4>
-                <p class="tool-tagline">Automated neurite outgrowth quantification</p>
-                <p>A machine-learning framework that automatically measures neurite outgrowth after CNS injury, letting users define regions of interest for injury paradigms like thoracic crush and pyramidotomy. DeNAT reaches 87% accuracy against manual scoring while cutting out observer variability and labor.</p>
-                <div class="tool-links">
-                  <a href="https://neuriteanalysis.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Launch DeNAT</a>
-                  <a href="https://www.biorxiv.org/content/10.1101/2025.09.18.676567v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Read the Preprint</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="section-title padd-15 tools-subtitle">
-              <h3>Interactive Data Portals</h3>
-              <p style="color: var(--text-color)">Companion webpages where you can explore the results behind specific papers directly — built alongside the analysis, not general-purpose software.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="portal-grid">
-              <div class="portal-card">
-                <h4>HiCViz</h4>
-                <p>Explore the chromatin compartments, TADs, and loop maps behind our study of 3D genome rewiring and regenerative potential in the adult CNS.</p>
-                <div class="tool-links">
-                  <a href="https://hicviz.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
-                  <a href="https://www.biorxiv.org/content/10.64898/2026.03.12.711224v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
-                </div>
-              </div>
-              <div class="portal-card">
-                <h4>PATZ1 Explorer</h4>
-                <p>Browse the snATAC-seq and snRNA-seq data comparing PATZ1-treated versus injured corticospinal neurons.</p>
-                <div class="tool-links">
-                  <a href="https://patz1.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
-                  <a href="https://www.biorxiv.org/content/10.1101/2025.05.14.654166v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
-                </div>
-              </div>
-              <div class="portal-card">
-                <h4>NRTF Explorer</h4>
-                <p>Browse the snRNA-seq data behind the NR2F1/NR2F6 nuclear receptor transcription factor study in axon regeneration.</p>
-                <div class="tool-links">
-                  <a href="https://nrtf.netlify.app/" target="_blank" class="data-link-btn"><i class="fa fa-external-link"></i> Open Portal</a>
-                  <a href="https://www.biorxiv.org/content/10.1101/2025.06.19.660319v1" target="_blank" class="data-link-btn secondary"><i class="fa fa-file-text-o"></i> Paper</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Tools Section End -->
-
-      <!-- Portfolio Section -->
-<section class="portfolio section" id="service">
-  <div class="container">
-    <div class="row">
-      <div class="section-title padd-15">
-        <h2>Services</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="portfolio-filter padd-15">
-        <button type="button" class="active" data-filter="all">All</button>
-        <button type="button" data-filter="web-design">Web Design</button>
-        <button type="button" data-filter="photography">Photography</button>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Portfolio Item 1 -->
-      <div class="portfolio-item padd-15" data-category="web-design">
-        <div class="portfolio-item-inner shadow-dark">
-          <a href="https://bdu-biodiversity.blogspot.com/p/blog-page_5459.html" target="_blank">
-            <div class="portfolio-img">
-              <img src="images/portfolio/1.jpg" alt="Biodiversity Blog">
-            </div>
-            <div class="portfolio-info">
-              <h4>I have created the Bharathidasan University Biodiversity Blog to document and showcase the rich biodiversity of our campus This platform aims to connect nature enthusiasts, researchers, and students in sharing photographs, species identification, and conservation efforts.</h4>
-              <div class="icon">
-                <i class="fa fa-external-link"></i>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- Portfolio Item End -->
-
-      <!-- Portfolio Item 2 -->
-      <div class="portfolio-item padd-15" data-category="web-design">
-        <div class="portfolio-item-inner shadow-dark">
-          <a href="https://venkateshlab.science/" target="_blank">
-            <div class="portfolio-img">
-              <img src="images/portfolio/2.jpg" alt="Venkatesh Lab">
-            </div>
-            <div class="portfolio-info">
-              <h4>Venkatesh Lab is dedicated to advancing research in Neuroscience. Our work focuses on understanding the axon growth regulated during development and regeneration in mammals, fostering collaboration among scientists and students. As the website admin, I ensure regular updates, making it a hub for research insights and discoveries.</h4>
-              <div class="icon">
-                <i class="fa fa-external-link"></i>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- Portfolio Item End -->
-    </div>
-  </div>
-</section>
-<!-- Portfolio Section End -->
-
-      <!-- Testimonial Section -->
-<section class="testimonial section" id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="section-title padd-15">
-        <h2>Testimonials</h2>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Testimonial Item 1 -->
-      <div class="testimonial-item padd-15">
-        <div class="testimonial-item-inner shadow-dark">
-          <div class="testimonial-img">
-            <img src="images/testimonial1.jpg" alt="Dr. John Doe">
-          </div>
-          <p>"Manoj is an exceptional bioinformatician. His expertise in genomics and software development is truly inspiring!"</p>
-          <h4>- Dr. Ishwariya Venkatesh</h4>
-        </div>
-      </div>
-      <!-- Testimonial Item 2 -->
-      <div class="testimonial-item padd-15">
-        <div class="testimonial-item-inner shadow-dark">
-          <div class="testimonial-img">
-            <img src="images/testimonial2.jpg" alt="Dr. Jane Smith">
-          </div>
-          <p>"Working with Manoj has been an absolute pleasure. His ability to automate complex workflows is unmatched."</p>
-          <h4>- Dr. Bharanidharan</h4>
-        </div>
-      </div>
-      <!-- Testimonial Item 3 -->
-      <div class="testimonial-item padd-15">
-        <div class="testimonial-item-inner shadow-dark">
-          <div class="testimonial-img">
-            <img src="images/testimonial3.jpg" alt="Prof. Richard Lee">
-          </div>
-          <p>"A brilliant researcher with an innovative approach to computational biology. Highly recommended!"</p>
-          <h4>- Vatsal Mehara</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-      <!-- Contact Section -->
-      <section class="contact section" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Contact Me</h2>
-            </div>
-          </div>
-          <div class="row">
-            <!-- contact-info-item  -->
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <i class="fa fa-phone"></i>
-                <h4>Call Me On</h4>
-                <p>+91 7708556754</p>
-              </div>
-            </div>
-            <!-- contact-info-item end -->
-            <!-- contact-info-item  -->
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <i class="fa fa-map-marker"></i>
-                <h4>Office</h4>
-                <p>Centre for Cellular & Molecular Biology,
-                  Habsiguda, Uppal,
-                  Hyderabad - 500 007</p>
-              </div>
-            </div>
-            <!-- contact-info-item end -->
-            <!-- contact-info-item  -->
-            <div class="contact-info-item padd-15">
-              <div class="icon">
-                <i class="fa fa-envelope"></i>
-                <h4>Email</h4>
-                <p>manojkumarbioinfo@gmail.com</p>
-              </div>
-            </div>
-            <!-- contact-info-item end -->
-          </div>
-
-          <!-- Contact Form -->
-          <div class="row">
-            <form id="contactForm" action="https://formspree.io/f/mqeravqb" method="POST" class="contact-form padd-15">
-              <div class="row">
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Name*" required>
+                <div class="portfolio-info">
+                  <h4>I have created the Bharathidasan University Biodiversity Blog to document and showcase the rich biodiversity of our campus This platform aims to connect nature enthusiasts, researchers, and students in sharing photographs, species identification, and conservation efforts.</h4>
+                  <div class="icon">
+                    <i class="fa fa-external-link"></i>
                   </div>
                 </div>
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email*" required>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject*" required>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" placeholder="Your Message..." required></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 padd-15">
-                  <button type="submit" class="btn">Send Message</button>
-                  <p id="form-status"></p>
-                </div>
-              </div>
-            </form>
+              </a>
+            </div>
           </div>
-          <!-- Contact Form End -->
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item 2 -->
+          <div class="portfolio-item" data-category="web-design">
+            <div class="portfolio-item-inner shadow-dark">
+              <a href="https://venkateshlab.science/" target="_blank">
+                <div class="portfolio-img">
+                  <img src="images/portfolio/2.jpg" alt="Venkatesh Lab">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Venkatesh Lab is dedicated to advancing research in Neuroscience. Our work focuses on understanding the axon growth regulated during development and regeneration in mammals, fostering collaboration among scientists and students. As the website admin, I ensure regular updates, making it a hub for research insights and discoveries.</h4>
+                  <div class="icon">
+                    <i class="fa fa-external-link"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
         </div>
-      </section>
-      <!-- Contact Section End -->
-
-    </div>
-    <!-- Main Content End -->
-  </div>
-  <!-- Main Container End -->
-
-  <!-- Lightbox -->
-  <div class="lightbox">
-    <div class="lightbox-content">
-      <div class="lightbox-close">&times;</div>
-      <img src="" alt="" onclick="nextItem()" class="lightbox-img">
-      <div class="lightbox-caption">
-        <div class="caption-text"></div>
-        <div class="caption-counter"></div>
       </div>
-    </div>
-    <div class="lightbox-controls">
-      <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
-      <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
-    </div>
-  </div>
-  <!-- Lightbox End -->
+    </section>
+    <!-- Portfolio Section End -->
 
-  <!-- Live Style Switcher - Demo Only -->
-  <div class="style-switcher">
-    <div class="toggle-style-switcher">
-      <i class="fa fa-cog fa-spin"></i>
-    </div>
-    <h5>Style Switcher</h5>
-    <ul>
-      <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839;" onclick="setActiveStyle('pink')"></a></li>
-      <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3;" onclick="setActiveStyle('blue')"></a></li>
-      <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f;" onclick="setActiveStyle('orange')"></a></li>
-      <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400;" onclick="setActiveStyle('yellow')"></a></li>
-      <li><a href="javascript:void(0);" title="green" style="background-color: #72b626;" onclick="setActiveStyle('green')"></a></li>
-    </ul>
-    <h5>Body Skin</h5>
-    <label>
-      <input type="radio" class="body-skin" name="body-skin" value="light" checked="true" > Light
-    </label>
-    <label>
-      <input type="radio" class="body-skin" name="body-skin" value="dark" > Dark
-    </label>
-  </div>
-  <!-- Live Style Switcher - Demo Only End -->
+    <!-- Testimonial Section -->
+    <section class="testimonial section" id="testimonial">
+      <div class="container-wide">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <!-- Testimonial Item 1 -->
+          <div class="testimonial-item">
+            <div class="testimonial-item-inner shadow-dark">
+              <div class="testimonial-img">
+                <img src="images/testimonial1.jpg" alt="Dr. John Doe">
+              </div>
+              <p>"Manoj is an exceptional bioinformatician. His expertise in genomics and software development is truly inspiring!"</p>
+              <h4>- Dr. Ishwariya Venkatesh</h4>
+            </div>
+          </div>
+          <!-- Testimonial Item 2 -->
+          <div class="testimonial-item">
+            <div class="testimonial-item-inner shadow-dark">
+              <div class="testimonial-img">
+                <img src="images/testimonial2.jpg" alt="Dr. Jane Smith">
+              </div>
+              <p>"Working with Manoj has been an absolute pleasure. His ability to automate complex workflows is unmatched."</p>
+              <h4>- Dr. Bharanidharan</h4>
+            </div>
+          </div>
+          <!-- Testimonial Item 3 -->
+          <div class="testimonial-item">
+            <div class="testimonial-item-inner shadow-dark">
+              <div class="testimonial-img">
+                <img src="images/testimonial3.jpg" alt="Prof. Richard Lee">
+              </div>
+              <p>"A brilliant researcher with an innovative approach to computational biology. Highly recommended!"</p>
+              <h4>- Vatsal Mehara</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container-wide">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+        </div>
+
+        <div class="contact-info-grid">
+          <div class="contact-info-item">
+            <div class="icon">
+              <i class="fa fa-phone"></i>
+              <h4>Call Me On</h4>
+              <p>+91 7708556754</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">
+              <i class="fa fa-map-marker"></i>
+              <h4>Office</h4>
+              <p>Centre for Cellular & Molecular Biology,
+                Habsiguda, Uppal,
+                Hyderabad - 500 007</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">
+              <i class="fa fa-envelope"></i>
+              <h4>Email</h4>
+              <p>manojkumarbioinfo@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contactForm" action="https://formspree.io/f/mqeravqb" method="POST" class="contact-form">
+          <div class="form-row form-row-three">
+            <div class="form-item">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Name*" required>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email*" required>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject*" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-item form-item-full">
+              <div class="form-group">
+                <textarea class="form-control" name="message" placeholder="Your Message..." required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-item form-item-full">
+              <button type="submit" class="btn">Send Message</button>
+              <p id="form-status"></p>
+            </div>
+          </div>
+        </form>
+        <!-- Contact Form End -->
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+  </main>
 
   <!-- Plugins -->
   <script src="js/ityped.min.js"></script>
   <!-- Template js -->
   <script src="js/script.js"></script>
-  <!-- Live Style Js - Demo Only -->
+  <!-- Theme Toggle Js -->
   <script src="js/styleSwitcher.js"></script>
 </body>
 
