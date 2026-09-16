@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Reaction Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">REFLEX LAB / 01</p>
+        <h1>Reaction<br /><span>Test</span></h1>
+        <p class="intro">Three ways to put your reflexes and timing under pressure.</p>
+      </header>
+
+      <section class="game-card" aria-live="polite">
+        <div class="test-tabs" role="tablist" aria-label="Choose a test">
+          <button class="tab active" type="button" data-mode="classic" role="tab" aria-selected="true">01 <span>Classic</span></button>
+          <button class="tab" type="button" data-mode="f1" role="tab" aria-selected="false">02 <span>F1 Start</span></button>
+          <button class="tab" type="button" data-mode="timing" role="tab" aria-selected="false">03 <span>Time Stop</span></button>
+          <button class="tab" type="button" data-mode="mind" role="tab" aria-selected="false">04 <span>Odd / Even</span></button>
+                  <button class="tab" type="button" data-mode="memory" role="tab" aria-selected="false">05 <span>Memory</span></button>
+        </div>
+        <div class="card-topline">
+          <span id="state-label">READY WHEN YOU ARE</span>
+          <span class="key-hint"><kbd>SPACE</kbd> KEY</span>
+        </div>
+        <button id="test-area" class="test-area idle" type="button" aria-label="Press Space or click to start the reaction test">
+          <span class="signal-dot" aria-hidden="true"></span>
+          <span class="f1-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="memory-board" aria-label="Memory sequence colors"><i data-memory="1">1</i><i data-memory="2">2</i><i data-memory="3">3</i><i data-memory="4">4</i></span>
+          <span id="prompt" class="prompt">Press <strong>Space</strong> to start</span>
+          <span id="sub-prompt" class="sub-prompt">Keep your eyes on the screen.</span>
+        </button>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">LATEST</span>
+            <strong id="latest">—</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">PERSONAL BEST</span>
+            <strong id="best">—</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">ATTEMPTS</span>
+            <strong id="attempts">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <p id="tip" class="tip">Tip: wait for the panel to turn green, then hit Space as quickly as you can.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

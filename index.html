@@ -27,7 +27,7 @@
         <a href="#publications" data-nav="publications"><i class="fa fa-list"></i> Publications</a>
         <a href="#tools" data-nav="tools"><i class="fa fa-flask"></i> Tools</a>
         <a href="#service" data-nav="service"><i class="fa fa-briefcase"></i> Services</a>
-        <a href="#testimonial" data-nav="testimonial"><i class="fa fa-quote-left"></i> Testimonials</a>
+        <a href="#games" data-nav="games"><i class="fa fa-gamepad"></i> Games</a>
         <a href="#contact" data-nav="contact"><i class="fa fa-comments"></i> Contact</a>
       </nav>
 
@@ -706,48 +706,74 @@
     </section>
     <!-- Portfolio Section End -->
 
-    <!-- Testimonial Section -->
-    <section class="testimonial section" id="testimonial">
+    <!-- Games Section -->
+    <section class="games section" id="games">
       <div class="container-wide">
         <div class="section-title">
-          <h2>Testimonials</h2>
+          <h2>Reflex &amp; Brain Games</h2>
+          <p>Put your reflexes, precision, and cognitive speed to the test with 5 interactive mini-challenges.</p>
         </div>
 
-        <div class="testimonial-grid">
-          <!-- Testimonial Item 1 -->
-          <div class="testimonial-item">
-            <div class="testimonial-item-inner shadow-dark">
-              <div class="testimonial-img">
-                <img src="images/testimonial1.jpg" alt="Dr. John Doe">
+        <div class="game-wrapper">
+          <div class="game-card shadow-dark">
+            <div class="test-tabs" role="tablist" aria-label="Choose a game mode">
+              <button class="tab active" type="button" data-mode="classic" role="tab" aria-selected="true"><span class="tab-num">01</span> <span class="tab-text">Classic</span></button>
+              <button class="tab" type="button" data-mode="f1" role="tab" aria-selected="false"><span class="tab-num">02</span> <span class="tab-text">F1 Start</span></button>
+              <button class="tab" type="button" data-mode="timing" role="tab" aria-selected="false"><span class="tab-num">03</span> <span class="tab-text">Time Stop</span></button>
+              <button class="tab" type="button" data-mode="mind" role="tab" aria-selected="false"><span class="tab-num">04</span> <span class="tab-text">Odd / Even</span></button>
+              <button class="tab" type="button" data-mode="memory" role="tab" aria-selected="false"><span class="tab-num">05</span> <span class="tab-text">Memory</span></button>
+            </div>
+
+            <div class="card-topline">
+              <span id="state-label" class="state-label">READY WHEN YOU ARE</span>
+              <div class="topline-controls">
+                <span class="key-hint"><kbd>SPACE</kbd> or <i class="fa fa-mouse-pointer"></i> Click</span>
+                <button type="button" class="reset-stats-btn" id="reset-stats" title="Reset stats for current game" aria-label="Reset stats for current game"><i class="fa fa-refresh"></i></button>
               </div>
-              <p>"Manoj is an exceptional bioinformatician. His expertise in genomics and software development is truly inspiring!"</p>
-              <h4>- Dr. Ishwariya Venkatesh</h4>
+            </div>
+
+            <div id="test-area" class="test-area idle" role="button" tabindex="0" aria-label="Press Space or click to start the reaction test">
+              <span class="signal-dot" aria-hidden="true"></span>
+              <span class="f1-lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              <div class="memory-board" aria-label="Memory sequence colors">
+                <button type="button" class="memory-pad" data-memory="1" aria-label="Pad 1 (Red)">1</button>
+                <button type="button" class="memory-pad" data-memory="2" aria-label="Pad 2 (Amber)">2</button>
+                <button type="button" class="memory-pad" data-memory="3" aria-label="Pad 3 (Green)">3</button>
+                <button type="button" class="memory-pad" data-memory="4" aria-label="Pad 4 (Blue)">4</button>
+              </div>
+              <span id="prompt" class="prompt">Press <strong>Space</strong> or Click to start</span>
+              <span id="sub-prompt" class="sub-prompt">Keep your eyes on the screen.</span>
+
+              <!-- Mind / Odd-Even On-Screen Controls -->
+              <div class="mind-controls" id="mind-controls" aria-label="Odd or Even buttons">
+                <button type="button" class="mind-btn" data-choice="odd">Odd <kbd>O</kbd></button>
+                <button type="button" class="mind-btn" data-choice="even">Even <kbd>E</kbd></button>
+              </div>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-label">LATEST</span>
+                <strong id="latest">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">PERSONAL BEST</span>
+                <strong id="best">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">ATTEMPTS</span>
+                <strong id="attempts">0</strong>
+              </div>
             </div>
           </div>
-          <!-- Testimonial Item 2 -->
-          <div class="testimonial-item">
-            <div class="testimonial-item-inner shadow-dark">
-              <div class="testimonial-img">
-                <img src="images/testimonial2.jpg" alt="Dr. Jane Smith">
-              </div>
-              <p>"Working with Manoj has been an absolute pleasure. His ability to automate complex workflows is unmatched."</p>
-              <h4>- Dr. Bharanidharan</h4>
-            </div>
-          </div>
-          <!-- Testimonial Item 3 -->
-          <div class="testimonial-item">
-            <div class="testimonial-item-inner shadow-dark">
-              <div class="testimonial-img">
-                <img src="images/testimonial3.jpg" alt="Prof. Richard Lee">
-              </div>
-              <p>"A brilliant researcher with an innovative approach to computational biology. Highly recommended!"</p>
-              <h4>- Vatsal Mehara</h4>
-            </div>
+
+          <div class="game-footer">
+            <p id="tip" class="tip"><i class="fa fa-lightbulb-o"></i> <span>Tip: wait for the panel to turn green, then hit Space or click as quickly as you can.</span></p>
           </div>
         </div>
       </div>
     </section>
-    <!-- Testimonial Section End -->
+    <!-- Games Section End -->
 
     <!-- Contact Section -->
     <section class="contact section" id="contact">
@@ -828,6 +854,8 @@
   <script src="js/script.js"></script>
   <!-- Theme Toggle Js -->
   <script src="js/styleSwitcher.js"></script>
+  <!-- Reflex & Brain Games Js -->
+  <script src="js/games.js"></script>
 </body>
 
 </html>
