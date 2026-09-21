@@ -61,10 +61,23 @@
 
 // iTyped
 
-window.ityped.init(document.querySelector('.iTyped'), {
-    strings: ["I'm a Bioinformatician", "I'm a Computational Neurobiologist", "I'm a Software Developer", "I'm a Web Developer", "I'm a Wildlife Photographer", "I'm a Gamer", "I love cooking"],
-    loop: true
-});
+const typedEl = document.querySelector('.iTyped');
+if (typedEl && window.ityped) {
+    window.ityped.init(typedEl, {
+        strings: [
+            "Single-Cell Multi-Omics & 3D Genomics",
+            "Chromatin Architecture & Axon Regeneration",
+            "Kinematic Motion Analysis (KiMA Suite)",
+            "Automated NGS & Deep Learning Pipelines",
+            "Translational Computational Neurobiology"
+        ],
+        loop: true,
+        typeSpeed: 60,
+        backSpeed: 30,
+        startDelay: 400,
+        backDelay: 1800
+    });
+}
 
 // Portfolio Item Filter
 
