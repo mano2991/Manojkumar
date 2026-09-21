@@ -452,8 +452,19 @@ body.dark .theme-toggle-btn .fa-sun-o {
 }
 
 /* ==========================================================================
-   Home / Hero — professional academic layout
+   Home / Hero — professional academic layout with Neural Matrix backdrop
    ========================================================================== */
+
+.neural-matrix-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    display: block;
+}
 
 .home.section {
     padding: 0;
@@ -463,6 +474,8 @@ body.dark .theme-toggle-btn .fa-sun-o {
 }
 
 .hero-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1240px;
     width: 100%;
     margin: auto;

@@ -51,6 +51,9 @@
 
     <!-- Home / Hero Section -->
     <section class="home section active" id="home">
+      <!-- Neural Matrix Background Canvas (Computational Neuroscience & Digital Rain) -->
+      <canvas id="neuralMatrixCanvas" class="neural-matrix-canvas" aria-hidden="true"></canvas>
+
       <div class="hero-wrapper">
         <div class="hero-grid">
           
@@ -70,15 +73,17 @@
             </div>
 
             <p class="hero-summary">
-              Investigating the molecular and 3D chromatin mechanisms governing neural regeneration and neurological disorders.
-              Integrating single-cell multi-omics, Hi-C, and machine learning pipelines to decode brain plasticity and engineer open-source bioinformatics tools.
+              Investigating the molecular and 3D chromatin mechanisms governing axon regeneration in spinal cord injury (SCI) using multi-omics models.
+              Integrating comprehensive sequencing technologies, including snRNA-seq, snATAC-seq, Hi-C, CUT&amp;RUN, Ribo-seq, mass spectrometry, bulk RNA-seq, and spatial transcriptomics, to decode neural repair programs and build translational bioinformatics tools.
             </p>
 
             <div class="hero-chips">
-              <span class="hero-chip"><i class="fa fa-pie-chart"></i> Single-Cell Multi-Omics</span>
+              <span class="hero-chip"><i class="fa fa-pie-chart"></i> Multi-Omics Sequencing</span>
               <span class="hero-chip"><i class="fa fa-code-fork"></i> 3D Genome &amp; Hi-C</span>
-              <span class="hero-chip"><i class="fa fa-cogs"></i> NGS Pipeline Engineering</span>
-              <span class="hero-chip"><i class="fa fa-heartbeat"></i> Axon Regeneration</span>
+              <span class="hero-chip"><i class="fa fa-heartbeat"></i> Axon Regeneration (SCI)</span>
+              <span class="hero-chip"><i class="fa fa-cogs"></i> Machine Learning</span>
+              <span class="hero-chip"><i class="fa fa-random"></i> Variant Analysis</span>
+              <span class="hero-chip"><i class="fa fa-cubes"></i> Structural Bioinformatics</span>
             </div>
 
             <div class="hero-actions">
@@ -447,7 +452,7 @@
                   PATZ1 remodels the nucleosome landscape to promote chromatin accessibility in injured neurons.
               </a></h4>
               <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
-              <p>Krishna N, <strong>Manojkumar Kumaran</strong> et al. <i>biorxiv</i> (2025)</p>
+              <p>Krishna N, Menon AS, <strong>Manojkumar Kumaran</strong> et al. <i>biorxiv</i> (2025)</p>
               <details>
                   <summary>Show Abstract</summary>
                   <p>Adult central nervous system neurons fail to regenerate after injury, in part due to epigenetic constraints that maintain a growth-restrictive chromatin state. We previously showed that the transcription factor PATZ1 reprograms chromatin accessibility in injured corticospinal neurons to promote axon regeneration, but the underlying mechanism remained unclear. Here we use nucleosome-resolution profiling to reveal that PATZ1 induces widespread nucleosome eviction at regeneration-associated gene loci. PATZ1 treatment dramatically reduces both nucleosome occupancy and fuzziness, indicating active chromatin remodeling rather than passive destabilization. This remodeling occurs preferentially at distal regulatory elements, where PATZ1 drives a greater than 3-fold expansion of H3K27ac-marked active enhancers. Nucleosome eviction at these sites precedes enhancer activation, establishing a mechanistic link between chromatin remodeling and transcriptional reprogramming. Our findings demonstrate that targeted nucleosome eviction at enhancers underlies PATZ1-mediated chromatin reorganization, providing mechanistic insight into how epigenetic barriers to CNS regeneration can be overcome.</p>
@@ -475,8 +480,8 @@
           <div class="publication-card">
             <span class="pub-year">2025</span>
             <div class="pub-body">
-              <h4><a href="https://www.biorxiv.org/content/10.1101/2025.11.05.686894v1" target="_blank">
-                  Targeting RARβ with a stable retinoic acid mimic promotes neurite outgrowth, neurogenesis, and behavioural recovery.
+              <h4><a href="https://www.biorxiv.org/content/10.1101/2025.11.05.686894v3" target="_blank">
+                  A tribenzamide small molecule with retinoic acid-like activity promotes axon growth and motor recovery after spinal cord injury
               </a></h4>
               <span class="preprint-badge">Preprint &middot; Not Peer-Reviewed</span>
               <p>Sanyal K, <strong>Manojkumar Kumaran</strong> et al. <i>biorxiv</i> (2025)</p>
@@ -951,6 +956,8 @@
   <script src="js/styleSwitcher.js"></script>
   <!-- Reflex & Brain Games Js -->
   <script src="js/games.js"></script>
+  <!-- Neural Matrix Computational Neuroscience Background -->
+  <script src="js/neuralMatrix.js"></script>
 </body>
 
 </html>
