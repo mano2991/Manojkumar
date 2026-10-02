@@ -14,49 +14,62 @@
     ageEl.textContent = age;
 })();
 
-// Publications pagination — show N per page, with page-dot navigation
+// Split peer-reviewed publications and preprints, then paginate each section
 
 (function () {
     const PER_PAGE = 5;
-    const list = document.querySelector('.publication-list'),
-        pagination = document.getElementById('pubPagination');
-    if (!list || !pagination) return;
+    const publicationsList = document.querySelector('#publications .publication-list');
+    const preprintsList = document.querySelector('#preprints .publication-list');
 
-    const cards = Array.from(list.children).filter(function (el) {
-        return el.classList.contains('publication-card');
-    });
-    const pageCount = Math.ceil(cards.length / PER_PAGE);
-    if (pageCount <= 1) return;
-
-    let currentPage = 0;
-
-    function renderDots() {
-        pagination.innerHTML = '';
-        for (let i = 0; i < pageCount; i++) {
-            const dot = document.createElement('button');
-            dot.type = 'button';
-            dot.className = 'pub-page-dot';
-            dot.textContent = String(i + 1);
-            dot.setAttribute('aria-label', 'Page ' + (i + 1) + ' of ' + pageCount);
-            if (i === currentPage) dot.classList.add('active');
-            dot.addEventListener('click', function () {
-                goToPage(i);
-            });
-            pagination.appendChild(dot);
-        }
-    }
-
-    function goToPage(page) {
-        currentPage = page;
-        cards.forEach(function (card, i) {
-            const cardPage = Math.floor(i / PER_PAGE);
-            card.style.display = cardPage === currentPage ? '' : 'none';
+    if (publicationsList && preprintsList) {
+        Array.from(publicationsList.querySelectorAll('.publication-card')).forEach(function (card) {
+            if (card.querySelector('.preprint-badge')) {
+                preprintsList.appendChild(card);
+            }
         });
-        renderDots();
-        list.closest('.section').scrollTop = 0;
     }
 
-    goToPage(0);
+    document.querySelectorAll('.publication.section').forEach(function (section) {
+        const list = section.querySelector('.publication-list');
+        const pagination = section.querySelector('.pub-pagination');
+        if (!list || !pagination) return;
+
+        const cards = Array.from(list.children).filter(function (el) {
+            return el.classList.contains('publication-card');
+        });
+        const pageCount = Math.ceil(cards.length / PER_PAGE);
+        if (pageCount <= 1) return;
+
+        let currentPage = 0;
+
+        function renderDots() {
+            pagination.innerHTML = '';
+            for (let i = 0; i < pageCount; i++) {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'pub-page-dot';
+                dot.textContent = String(i + 1);
+                dot.setAttribute('aria-label', 'Page ' + (i + 1) + ' of ' + pageCount);
+                if (i === currentPage) dot.classList.add('active');
+                dot.addEventListener('click', function () {
+                    goToPage(i);
+                });
+                pagination.appendChild(dot);
+            }
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            cards.forEach(function (card, i) {
+                const cardPage = Math.floor(i / PER_PAGE);
+                card.style.display = cardPage === currentPage ? '' : 'none';
+            });
+            renderDots();
+            section.scrollTop = 0;
+        }
+
+        goToPage(0);
+    });
 })();
 
 // iTyped
