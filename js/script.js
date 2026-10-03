@@ -14,12 +14,15 @@
     ageEl.textContent = age;
 })();
 
-// Split peer-reviewed publications and preprints, then paginate each section
+// Split peer-reviewed publications and preprints into tabs, then paginate each panel
 
 (function () {
     const PER_PAGE = 5;
-    const publicationsList = document.querySelector('#publications .publication-list');
-    const preprintsList = document.querySelector('#preprints .publication-list');
+    const publicationSection = document.getElementById('publications');
+    if (!publicationSection) return;
+
+    const publicationsList = publicationSection.querySelector('[data-publication-panel="published"] .publication-list');
+    const preprintsList = publicationSection.querySelector('[data-publication-panel="preprints"] .publication-list');
 
     if (publicationsList && preprintsList) {
         Array.from(publicationsList.querySelectorAll('.publication-card')).forEach(function (card) {
@@ -29,9 +32,20 @@
         });
     }
 
-    document.querySelectorAll('.publication.section').forEach(function (section) {
-        const list = section.querySelector('.publication-list');
-        const pagination = section.querySelector('.pub-pagination');
+    publicationSection.querySelectorAll('[data-publication-tab]').forEach(function (tab) {
+        const panelName = tab.getAttribute('data-publication-tab');
+        const panel = publicationSection.querySelector('[data-publication-panel="' + panelName + '"]');
+        const count = panel ? panel.querySelectorAll('.publication-card').length : 0;
+        const countBadge = tab.querySelector('.publication-tab-count');
+        if (countBadge) {
+            countBadge.textContent = count;
+            countBadge.setAttribute('aria-label', count + (count === 1 ? ' paper' : ' papers'));
+        }
+    });
+
+    publicationSection.querySelectorAll('.publication-panel').forEach(function (panel) {
+        const list = panel.querySelector('.publication-list');
+        const pagination = panel.querySelector('.pub-pagination');
         if (!list || !pagination) return;
 
         const cards = Array.from(list.children).filter(function (el) {
@@ -65,10 +79,33 @@
                 card.style.display = cardPage === currentPage ? '' : 'none';
             });
             renderDots();
-            section.scrollTop = 0;
+            publicationSection.scrollTop = 0;
         }
 
         goToPage(0);
+    });
+
+    const tabs = publicationSection.querySelectorAll('[data-publication-tab]');
+    const panels = publicationSection.querySelectorAll('[data-publication-panel]');
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            const selectedPanel = tab.getAttribute('data-publication-tab');
+
+            tabs.forEach(function (item) {
+                const isActive = item === tab;
+                item.classList.toggle('active', isActive);
+                item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+
+            panels.forEach(function (panel) {
+                const isActive = panel.getAttribute('data-publication-panel') === selectedPanel;
+                panel.classList.toggle('active', isActive);
+                panel.hidden = !isActive;
+            });
+
+            publicationSection.scrollTop = 0;
+        });
     });
 })();
 

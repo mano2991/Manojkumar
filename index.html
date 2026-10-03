@@ -25,7 +25,6 @@
         <a href="#home" class="active" data-nav="home"><i class="fa fa-home"></i> Home</a>
         <a href="#about" data-nav="about"><i class="fa fa-user"></i> About</a>
         <a href="#publications" data-nav="publications"><i class="fa fa-list"></i> Publications</a>
-        <a href="#preprints" data-nav="preprints"><i class="fa fa-file-text-o"></i> Preprints</a>
         <a href="#tools" data-nav="tools"><i class="fa fa-flask"></i> Tools</a>
         <a href="#service" data-nav="service"><i class="fa fa-briefcase"></i> Services</a>
         <a href="#contact" data-nav="contact"><i class="fa fa-comments"></i> Contact</a>
@@ -375,12 +374,19 @@
     <!-- publication Section -->
     <section class="publication section" id="publications">
       <div class="container-wide">
-        <div class="section-title">
-          <h2>Publications</h2>
-          <p class="pub-stats">Total Citations: 149 | H-index: 5 | Research Score: 100.8 | Reads: 4660</p>
+        <div class="publication-heading">
+          <div class="section-title">
+            <h2>Publications</h2>
+            <p class="pub-stats">Total Citations: 149 | H-index: 5 | Research Score: 100.8 | Reads: 4660</p>
+          </div>
+          <div class="publication-tabs" role="tablist" aria-label="Publication type">
+            <button class="publication-tab active" id="publishedTab" type="button" role="tab" aria-selected="true" aria-controls="publishedPanel" data-publication-tab="published">Published <span class="publication-tab-count" aria-label="11 papers">11</span></button>
+            <button class="publication-tab" id="preprintsTab" type="button" role="tab" aria-selected="false" aria-controls="preprintsPanel" data-publication-tab="preprints">Preprints <span class="publication-tab-count" aria-label="7 papers">7</span></button>
+          </div>
         </div>
 
-        <div class="publication-list">
+        <div class="publication-panel active" id="publishedPanel" role="tabpanel" aria-labelledby="publishedTab" data-publication-panel="published">
+          <div class="publication-list">
           <!-- Paper - 2026 -->
 
           <div class="publication-card">
@@ -681,26 +687,17 @@
               </details>
             </div>
           </div>
+          </div>
+          <div class="pub-pagination"></div>
         </div>
 
-        <div class="pub-pagination" id="pubPagination"></div>
+        <div class="publication-panel" id="preprintsPanel" role="tabpanel" aria-labelledby="preprintsTab" data-publication-panel="preprints" hidden>
+          <div class="publication-list"></div>
+          <div class="pub-pagination"></div>
+        </div>
       </div>
     </section>
     <!-- publication Section End -->
-
-    <!-- Preprints Section -->
-    <section class="publication section" id="preprints">
-      <div class="container-wide">
-        <div class="section-title">
-          <h2>Preprints</h2>
-          <p class="pub-stats">Research manuscripts awaiting peer review</p>
-        </div>
-
-        <div class="publication-list"></div>
-        <div class="pub-pagination"></div>
-      </div>
-    </section>
-    <!-- Preprints Section End -->
 
     <!-- Tools Section -->
     <section class="tools section" id="tools">
