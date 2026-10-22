@@ -30,6 +30,11 @@
                 preprintsList.appendChild(card);
             }
         });
+
+        const latestPublication = publicationsList.querySelector('a[href="https://www.nature.com/articles/s42003-026-11196-7"]');
+        if (latestPublication) {
+            publicationsList.prepend(latestPublication.closest('.publication-card'));
+        }
     }
 
     publicationSection.querySelectorAll('[data-publication-tab]').forEach(function (tab) {
