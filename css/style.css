@@ -1,10 +1,6 @@
 /*Font Awesome Free Icon*/
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-/*Google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+/* Fonts are loaded via <link> in index.html */
 
 /* ==========================================================================
    Design Tokens
@@ -2674,4 +2670,47 @@ textarea.form-control {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+/* Research themes: four cards read best as a 2 x 2 grid */
+.research .tool-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+/* Contact card links use the brand colour instead of the browser default */
+.contact-info-item p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info-item p a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Expertise: short descriptive lines where tags alone would say too little */
+.skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.skill-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
 }
