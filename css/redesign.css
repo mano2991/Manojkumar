@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Redesign layer — loaded after style.css.
+   Quiet academic look: warm paper, ink text, one navy accent, serif headings.
+   ========================================================================== */
+
+:root {
+    --primary-color: #1f3a6e;
+    --primary-color-dark: #162b54;
+    --primary-color-light: #3b5ea3;
+    --accent-color: #9a3412;
+    --hover-color: #9a3412;
+
+    --bg-color: #faf8f4;
+    --surface-color: #ffffff;
+    --surface-alt-color: #f2eee7;
+    --border-color: #e6e0d5;
+    --border-color-strong: #d3cbbb;
+
+    --heading-color: #16181d;
+    --text-color: #3d424c;
+    --text-muted-color: #6c717b;
+
+    --shadow-color: rgba(30, 25, 15, 0.06);
+    --shadow-color-strong: rgba(30, 25, 15, 0.12);
+
+    --font-heading: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+    --primary-color: #8fb0ee;
+    --primary-color-dark: #6f96e0;
+    --primary-color-light: #b4cbf5;
+    --accent-color: #f0a37a;
+    --hover-color: #f0a37a;
+
+    --bg-color: #121316;
+    --surface-color: #1a1c21;
+    --surface-alt-color: #22252b;
+    --border-color: #2c3037;
+    --border-color-strong: #3a3f48;
+
+    --heading-color: #f3f1ec;
+    --text-color: #c9ccd2;
+    --text-muted-color: #9096a1;
+    --text-on-primary: #0f1218;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); }
+
+/* ---------- Sidebar: text-only, no boxes ---------- */
+.sidebar {
+    background: transparent;
+    border-right: 1px solid var(--border-color);
+}
+.sidebar-logo {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.sidebar-links { gap: 2px; }
+.sidebar-links a {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 10px 0 10px 16px;
+    border-radius: 0;
+    border-left: 2px solid transparent;
+    background: none !important;
+}
+.sidebar-links a i { display: none; }
+.sidebar-links a:hover { color: var(--heading-color); border-left-color: var(--border-color-strong); }
+.sidebar-links a.active {
+    color: var(--heading-color);
+    font-weight: 600;
+    border-left-color: var(--primary-color);
+}
+.sidebar .copyright-text { font-size: 12px; }
+
+/* ---------- Sections: fade in, don't slide ---------- */
+.section.active { animation: fadeInSection 0.35s ease; }
+.section-title { margin-bottom: 44px; }
+.section-title h2 {
+    font-size: clamp(34px, 4vw, 46px);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+}
+.section-title > p { font-size: 16px; line-height: 1.65; }
+
+/* ---------- Hero ---------- */
+.neural-matrix-canvas { opacity: 0.22; }
+.hero-focus-box, .hero-floating-card { display: none; }
+.hero-badge {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 18px;
+}
+.hero-badge .badge-text {
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted-color);
+}
+.hero-name {
+    font-weight: 500;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+}
+.hero-role {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2vw, 25px);
+    color: var(--primary-color);
+    margin-bottom: 22px;
+}
+.hero-summary {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 30px;
+}
+.hero-photo-frame {
+    border-radius: 6px;
+    box-shadow: 0 30px 60px -30px var(--shadow-color-strong);
+}
+.hero-photo { border-radius: 6px; }
+.hero-floating-pill {
+    border-radius: 4px;
+    font-size: 12px;
+}
+.social-strip-label { display: none; }
+.hero-social-strip { margin-top: 28px; }
+.social-links a { box-shadow: none; border: 1px solid var(--border-color); background: transparent; }
+.social-links a:hover { border-color: var(--primary-color); color: var(--primary-color); }
+
+/* ---------- Buttons: flat, square-ish ---------- */
+.btn {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: 4px;
+    box-shadow: none;
+}
+.btn-primary { background: var(--primary-color); border-color: var(--primary-color); color: var(--text-on-primary, #fff); }
+.btn-primary:hover { background: var(--primary-color-dark); border-color: var(--primary-color-dark); }
+.btn-secondary, .btn-outline { background: transparent; color: var(--heading-color); border: 1px solid var(--border-color-strong); }
+.btn-secondary:hover, .btn-outline:hover { border-color: var(--heading-color); color: var(--heading-color); background: transparent; }
+.hero-actions .btn i { display: none; }
+
+/* ---------- Publications: an editorial list ---------- */
+.publication-tab { font-family: var(--font-body); font-size: 14px; font-weight: 600; border-radius: 4px; }
+.publication-card {
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+}
+.pub-year {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-muted-color);
+}
+.publication-card h4 {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+.publication-card p {
+    font-size: 14.5px;
+    color: var(--text-muted-color);
+}
+.publication-card p strong { color: var(--heading-color); }
+.journal-badge, .preprint-badge {
+    border-radius: 3px;
+    border: none;
+    padding: 0;
+    margin: 10px 0 0;
+    font-family: var(--font-body);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+}
+.journal-badge { color: var(--primary-color); }
+.preprint-badge { color: var(--accent-color); }
+.publication-card details summary {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* ---------- Tool / website cards ---------- */
+.tool-card {
+    border-radius: 6px;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+    background: var(--surface-color);
+}
+.tool-card:hover { border-color: var(--border-color-strong); box-shadow: 0 10px 30px -18px var(--shadow-color-strong); }
+.tool-card h4 { font-size: 22px; font-weight: 500; }
+.data-link-btn { border-radius: 4px; font-family: var(--font-body); font-weight: 600; font-size: 13px; }
+
+/* ---------- Forms ---------- */
+.form-control { border-radius: 4px; font-family: var(--font-body); }
+
+.pub-stats {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-muted-color);
+}
+.publication-card details summary { font-family: var(--font-body); }
