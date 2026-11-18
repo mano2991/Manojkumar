@@ -33,7 +33,12 @@
 
         const latestPublication = publicationsList.querySelector('a[href="https://www.nature.com/articles/s42003-026-11196-7"]');
         if (latestPublication) {
-            publicationsList.prepend(latestPublication.closest('.publication-card'));
+            // Keep the two newest papers (EMBO J, review) first, then PATZ1
+            const cards = publicationsList.querySelectorAll('.publication-card');
+            const patzCard = latestPublication.closest('.publication-card');
+            if (cards.length > 2 && cards[1] !== patzCard) {
+                cards[1].after(patzCard);
+            }
         }
     }
 
