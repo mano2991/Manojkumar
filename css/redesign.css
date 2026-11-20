@@ -163,7 +163,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
 .hero-actions .btn i { display: none; }
 
 /* ---------- Publications: an editorial list ---------- */
-.publication-tab { font-family: var(--font-body); font-size: 14px; font-weight: 600; border-radius: 4px; }
 .publication-card {
     grid-template-columns: 72px 1fr;
     gap: 24px;
@@ -225,3 +224,57 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
     color: var(--text-muted-color);
 }
 .publication-card details summary { font-family: var(--font-body); }
+
+/* ---------- Publication tabs: flat text tabs with an underline ---------- */
+.publication-tabs {
+    gap: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+.publication-tab {
+    position: relative;
+    padding: 8px 0 10px;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted-color);
+}
+.publication-tab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+.publication-tab:hover { color: var(--heading-color); }
+.publication-tab.active {
+    background: transparent;
+    box-shadow: none;
+    color: var(--heading-color);
+}
+.publication-tab.active::after { transform: scaleX(1); }
+.publication-tab-count {
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    margin-left: 6px;
+    border-radius: 0;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted-color);
+}
+.publication-tab.active .publication-tab-count {
+    background: transparent;
+    color: var(--primary-color);
+}
